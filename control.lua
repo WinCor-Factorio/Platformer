@@ -1,10 +1,11 @@
-platformer = {} -- stores globals.
+local hub
+local platform
 
 script.on_init(function()
     DisableCutsceene()
 
     local force = game.forces["player"]
-    local platform = force.create_space_platform({
+    platform = force.create_space_platform({
         name = "Base One",
         planet = "void",
         starter_pack = "space-platform-starter-pack"
@@ -13,22 +14,45 @@ script.on_init(function()
     if not platform then
         error("The platform was not initiated properly")
     end
-
     platform.apply_starter_pack()
 
-    platformer.platform = platform
-    platformer.hub = platform.hub
+    storage.platform = platform
+    init_hub()
+
+    game.forces["player"].technologies["space-platform"].researched = true;
+end)
+
+function init_hub()
+    platform = storage.platform
+    hub = storage.platform.hub
+end
+
+script.on_load(function()
+    init_hub()
 end)
 
 script.on_event(defines.events.on_player_created, function(e)
-    game.players[e.player_index].enter_space_platform(platformer.platform)
+    game.players[e.player_index].enter_space_platform(platform)
+end)
+
+script.on_nth_tick(60000, function(e)
+    if hub then
+        hub.insert({ name = "crusher", count = 2 })
+        hub.insert({ name = "asteroid-collector", count = 4 })
+        hub.insert({ name = "assembling-machine-1", count = 10 })
+        hub.insert({ name = "inserter", count = 50 })
+        hub.insert({ name = "solar-panel", count = 5 })
+        hub.insert({ name = "space-platform-foundation", count = 990 })
+        hub.insert({ name = "electric-furnace", count = 4 })
+        hub.insert({ name = "transport-belt", count = 100 })
+    end
 end)
 
 script.on_event(defines.events.on_player_respawned, function(e)
     local player = game.players[e.player_index]
 
-    if platformer.platform.valid then
-        player.enter_space_platform(platformer.platform)
+    if platform.valid then
+        player.enter_space_platform(platform)
     else
         player.character.destroy()
         player.spectator = true
@@ -36,7 +60,7 @@ script.on_event(defines.events.on_player_respawned, function(e)
 end)
 
 script.on_event(defines.events.on_entity_died, function(e)
-    if e.entity.unit_number == platformer.hub.unit_number then
+    if e.entity.unit_number == hub.unit_number then
         for _, player in pairs(game.players) do
             if player.character then
                 player.character.destroy()
