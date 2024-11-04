@@ -9,6 +9,11 @@ table.insert(data.raw.technology["electronics"].effects, {
     recipe = "long-handed-inserter"
 })
 
+table.insert(data.raw.technology["space-platform"].effects, {
+    type = "unlock-recipe",
+    recipe = "advanced-metallic-asteroid-crushing"
+})
+
 -- Enable selected technologies
 data.raw.technology["electronics"].enabled = true;
 data.raw.technology["automation-science-pack"].enabled = true;
@@ -20,9 +25,6 @@ data.raw.recipe["space-platform-foundation"].ingredients = {
 }
 
 -- Enable starting items.
---data.raw.recipe["cargo-bay"].enabled = true
---data.raw.recipe["crusher"].enabled = true
---data.raw.recipe["asteroid-collector"].enabled = true
 data.raw.recipe["electric-furnace"].enabled = true
 data.raw.recipe["assembling-machine-1"].enabled = true
 data.raw.recipe["inserter"].enabled = true
