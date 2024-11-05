@@ -6,7 +6,11 @@ script.on_init(function()
 end)
 
 script.on_event(defines.events.on_player_created, function(e)
-    game.players[e.player_index].enter_space_platform(storage.platform)
+    local player = game.players[e.player_index]
+
+    player.character.destroy()
+    player.character = nil
+    player.teleport({ x = 0, y = 0 }, storage.platform.surface.name)
 end)
 
 function create_space_platform()
