@@ -1,1 +1,1 @@
-require("__Platformer__/planets/void.lua")
+require("__Platformer__/data/planets/void.lua")
