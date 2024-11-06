@@ -1,15 +1,17 @@
-script.on_init(function()
-    DisableCutsceene()
+script.on_init(function(e)
+    disable_cutsceene()
     create_space_platform()
     set_starting_items()
     research_starting_technologies()
+    init_hub_chest()
 end)
 
 script.on_event(defines.events.on_player_created, function(e)
     local player = game.players[e.player_index]
 
-    player.character.destroy()
-    player.character = nil
+    if player.character ~= nil then
+        player.character = nil
+    end
     player.teleport({ x = 0, y = 0 }, storage.platform.surface.name)
 end)
 
@@ -40,6 +42,7 @@ function set_starting_items()
         hub.insert({ name = "space-platform-foundation", count = 990 })
         hub.insert({ name = "electric-furnace", count = 4 })
         hub.insert({ name = "transport-belt", count = 100 })
+        hub.insert({ name = "hub-chest", count = 100 })
     end
 end
 
@@ -47,10 +50,14 @@ function research_starting_technologies()
     game.forces["player"].technologies["space-platform"].researched = true;
 end
 
-function DisableCutsceene()
+function disable_cutsceene()
     if remote.interfaces.freeplay then
         if remote.interfaces.freeplay.set_disable_crashsite then
             remote.call("freeplay", "set_disable_crashsite", true)
         end
     end
+end
+
+function init_hub_chest()
+    storage.hub_chests = {}
 end

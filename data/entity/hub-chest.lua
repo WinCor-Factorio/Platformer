@@ -1,15 +1,32 @@
 local itemName = "hub-chest"
 local graphics = "__Platformer__/graphics/hub-chest"
 
+local item_count = 0
+for _, item in pairs(data.raw.item) do -- all placeable items
+    if item.place_result ~= nil
+        or item.type == "repair-tool"
+        or item.place_as_tile ~= nil
+    then
+        item_count = item_count + 1
+        print(item.name)
+    end
+end
+
+for _, item in pairs(data.raw["repair-tool"]) do
+    item_count = item_count + 1
+    print(item.name)
+end
+
 -- Entity
 local entity = table.deepcopy(data.raw["container"]["steel-chest"])
 entity.name = itemName
-entity.inventory_size = 10;
+entity.inventory_size = item_count + 1; -- +1 for counting itself aswell.
 entity.inventory_type = "with_filters_and_bar"
 entity.minable.result = "hub-chest"
 entity.icon = graphics .. "/icon/voidchest.png"
 entity.icon_size = 64
-entity.surface_conditions = { { min = 0, max = 100000, property = "gravity" } }
+entity.surface_conditions = { { min = 0, max = 10000000, property = "gravity" } }
+entity.open_sound = nil
 entity.picture =
 {
     layers =
