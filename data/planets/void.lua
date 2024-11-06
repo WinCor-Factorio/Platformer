@@ -8,9 +8,9 @@ planet.asteroid_spawn_influence = 0.1
 planet.asteroid_spawn_definitions = {}
 local asteroid_definition = {
     asteroid = "metallic-asteroid-chunk",
-    probability = 0.5,
+    probability = 0.1,
     speed = 0.1,
-    angle_when_stopped = 1
+    angle_when_stopped = 0.25
 }
 
 asteroid_definition.type = "asteroid-chunk"
