@@ -114,11 +114,12 @@ function register_hub_chest(chest)
 end
 
 function create_wire_connection(set)
-    chest_green_port = set.chest.get_wire_connector(defines.wire_connector_id.circuit_green, true)
-    hub_green_port = set.hub.get_wire_connector(defines.wire_connector_id.circuit_green, true)
-    chest_green_port.connect_to(hub_green_port, false, defines.wire_origin.script)
+    connect_ports(set, defines.wire_connector_id.circuit_red)
+    connect_ports(set, defines.wire_connector_id.circuit_green)
+end
 
-    chest_red_port = set.chest.get_wire_connector(defines.wire_connector_id.circuit_red, true)
-    hub_red_port = set.hub.get_wire_connector(defines.wire_connector_id.circuit_red, true)
-    chest_red_port.connect_to(hub_red_port, false, defines.wire_origin.script)
+function connect_ports(set, definition)
+    chest_port = set.chest.get_wire_connector(definition, true)
+    hub_port = set.hub.get_wire_connector(definition, true)
+    chest_port.connect_to(hub_port, false, defines.wire_origin.script)
 end
