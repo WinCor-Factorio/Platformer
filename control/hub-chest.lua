@@ -18,7 +18,6 @@ script.on_nth_tick(1, function(event)
     end
 
     local max_per_tick = 3
-    local total = #storage.hub_chests
     local chest_index = global_index
 
     for n = 1, max_per_tick do
@@ -34,7 +33,7 @@ script.on_nth_tick(1, function(event)
         -- Move to the next chest
         chest_index = chest_index + 1
         global_index = global_index + 1
-        if chest_index > total then
+        if chest_index > #storage.hub_chests then
             global_index = 1
             return
         end
