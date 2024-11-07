@@ -1,39 +1,41 @@
-script.on_event(defines.events.on_built_entity, function(e)
-    local entity = e.entity
-    if entity.name == "hub-chest" and entity.type == "container" then
-        init_hub_chest_with_filters(entity)
-    end
-end)
+local global_index = 1
 
-script.on_event(defines.events.on_gui_opened, function(e)
-    if e.entity and e.entity.name == "hub-chest" then
-        local player = game.players[e.player_index]
-        player.opened = nil
-    end
-end)
+script.on_event(
+    { defines.events.on_built_entity, defines.events.on_robot_built_entity, defines.events
+        .on_space_platform_built_entity },
+    function(e)
+        local entity = e.entity
+        if entity.name == "hub-chest" and entity.type == "container" then
+            init_hub_chest_with_filters(entity)
+        end
+    end)
 
-script.on_event({ defines.events.on_space_platform_mined_entity,
-    defines.events.on_robot_mined_entity,
-    defines.events.on_player_mined_entity }, function(e)
-    if e.entity and e.entity.name == "hub-chest" then
-        remove_entity_from_storage(e.entity)
+script.on_nth_tick(1, function(event)
+    if storage.hub_chests == nil or #storage.hub_chests == 0 then
+        return
     end
-end)
 
--- using nth tick to maintain UPS.
-script.on_nth_tick(30, function(event)
-    for _, set in pairs(storage.hub_chests) do
-        if not set.chest.valid then
-            remove_entity_from_storage(set.chest)
+    local max_per_tick = 3
+    local total = #storage.hub_chests
+    local chest_index = global_index
+
+    for n = 1, max_per_tick do
+        local data_set = storage.hub_chests[chest_index]
+
+        if not is_data_set_valid(data_set) then
+            global_index = 1 -- don't bother to handele it, just start over in next iteration
             return
         end
 
-        if set.chest.get_inventory(defines.inventory.chest).is_empty()
-        then
+        teleport_items_to_hub_from_chest(data_set.chest, data_set.hub)
+
+        -- Move to the next chest
+        chest_index = chest_index + 1
+        global_index = global_index + 1
+        if chest_index > total then
+            global_index = 1
             return
         end
-
-        teleport_items_to_hub_from_chest(set.chest, set.hub)
     end
 end)
 
@@ -48,6 +50,8 @@ function init_hub_chest_with_filters(chest)
             i = i + 1
         end
     end
+
+    chest.operable = false
 end
 
 function item_filter(item)
@@ -69,9 +73,18 @@ function item_filter(item)
     return false
 end
 
-function remove_entity_from_storage(entity_to_remove)
+function is_data_set_valid(data_set)
+    if not data_set.chest.valid then
+        remove_set_from_storage(data_set)
+        return false
+    end
+
+    return not data_set.chest.get_inventory(defines.inventory.chest).is_empty()
+end
+
+function remove_set_from_storage(set_to_remove)
     for i, set in ipairs(storage.hub_chests) do
-        if set.chest == entity_to_remove then
+        if set == set_to_remove then
             table.remove(storage.hub_chests, i)
             break
         end

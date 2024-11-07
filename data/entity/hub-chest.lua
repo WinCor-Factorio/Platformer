@@ -7,13 +7,11 @@ for _, item in pairs(data.raw.item) do -- all placeable items
         or item.place_as_tile ~= nil
     then
         item_count = item_count + 1
-        print(item.name)
     end
 end
 
 for _, item in pairs(data.raw["repair-tool"]) do
     item_count = item_count + 1
-    print(item.name)
 end
 
 -- Entity
@@ -31,38 +29,21 @@ entity.picture =
     layers =
     {
         {
-            filename = graphics .. "/voidchest.png",
+            filename = graphics .. "/hr-voidchest.png",
             priority = "extra-high",
-            width = 33,
-            height = 37,
+            width = 66,
+            height = 74,
             shift = util.by_pixel(0, -2),
-            hr_version =
-            {
-                filename = graphics .. "/hr-voidchest.png",
-                priority = "extra-high",
-                width = 66,
-                height = 74,
-                shift = util.by_pixel(0, -2),
-                scale = 0.5
-            }
+            scale = 0.5
         },
         {
-            filename = graphics .. "/voidchest-shadow.png",
+            filename = graphics .. "/hr-voidchest-shadow.png",
             priority = "extra-high",
-            width = 56,
-            height = 24,
-            shift = util.by_pixel(12, 5),
+            width = 112,
+            height = 46,
+            shift = util.by_pixel(12, 4.5),
             draw_as_shadow = true,
-            hr_version =
-            {
-                filename = graphics .. "/hr-voidchest-shadow.png",
-                priority = "extra-high",
-                width = 112,
-                height = 46,
-                shift = util.by_pixel(12, 4.5),
-                draw_as_shadow = true,
-                scale = 0.5
-            }
+            scale = 0.5
         }
     }
 }
