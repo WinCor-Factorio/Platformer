@@ -6,7 +6,9 @@ script.on_event(
     function(e)
         local entity = e.entity
         if entity.name == "hub-chest" and entity.type == "container" then
+            set = register_hub_chest(entity)
             init_hub_chest_with_filters(entity)
+            create_wire_connection(set)
         end
     end)
 
@@ -20,14 +22,14 @@ script.on_nth_tick(1, function(event)
     local chest_index = global_index
 
     for n = 1, max_per_tick do
-        local data_set = storage.hub_chests[chest_index]
+        local set = storage.hub_chests[chest_index]
 
-        if not is_data_set_valid(data_set) then
+        if not is_data_set_valid(set) then
             global_index = 1 -- don't bother to handele it, just start over in next iteration
             return
         end
 
-        teleport_items_to_hub_from_chest(data_set.chest, data_set.hub)
+        teleport_items_to_hub_from_chest(set.chest, set.hub)
 
         -- Move to the next chest
         chest_index = chest_index + 1
@@ -40,7 +42,6 @@ script.on_nth_tick(1, function(event)
 end)
 
 function init_hub_chest_with_filters(chest)
-    register_hub_chest(chest)
     local inventory = chest.get_inventory(defines.inventory.chest)
     local i = 1
     for _, item in pairs(prototypes.item) do
@@ -73,13 +74,13 @@ function item_filter(item)
     return false
 end
 
-function is_data_set_valid(data_set)
-    if not data_set.chest.valid then
-        remove_set_from_storage(data_set)
+function is_data_set_valid(set)
+    if not set.chest.valid then
+        remove_set_from_storage(set)
         return false
     end
 
-    return not data_set.chest.get_inventory(defines.inventory.chest).is_empty()
+    return not set.chest.get_inventory(defines.inventory.chest).is_empty()
 end
 
 function remove_set_from_storage(set_to_remove)
@@ -107,5 +108,17 @@ end
 function register_hub_chest(chest)
     local surface = chest.surface
     local hub = surface.find_entity("space-platform-hub", { 0, 0 })
+    local set = { chest = chest, hub = hub }
     table.insert(storage.hub_chests, { chest = chest, hub = hub })
+    return set
+end
+
+function create_wire_connection(set)
+    chest_green_port = set.chest.get_wire_connector(defines.wire_connector_id.circuit_green, true)
+    hub_green_port = set.hub.get_wire_connector(defines.wire_connector_id.circuit_green, true)
+    chest_green_port.connect_to(hub_green_port, false, defines.wire_origin.script)
+
+    chest_red_port = set.chest.get_wire_connector(defines.wire_connector_id.circuit_red, true)
+    hub_red_port = set.hub.get_wire_connector(defines.wire_connector_id.circuit_red, true)
+    chest_red_port.connect_to(hub_red_port, false, defines.wire_origin.script)
 end
