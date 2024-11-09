@@ -7,7 +7,7 @@
   "dependencies": [
     "base >= 2.0.0",
     "space-age >= 2.0.14",
-    "space-platform-chests >= 1.0.0"
+    "space-platform-chests >= 1.0.2"
   ],
   "description": "Start in the cold wast space, gathering resources from asteroids and exploring the galaxy"
 }

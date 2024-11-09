@@ -1,3 +1,3 @@
 -- gameplay
-require("__Platformer__/control/init.lua")
-require("__Platformer__/control/losing.lua")
+require("__platformer__/control/init.lua")
+require("__platformer__/control/losing.lua")

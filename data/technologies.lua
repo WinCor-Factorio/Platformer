@@ -1,5 +1,5 @@
 -- modify technologies
-require("__Platformer__/data/technologies/space-platform.lua")
+require("__platformer__/data/technologies/space-platform.lua")
 
 
 -- Enable selected technologies

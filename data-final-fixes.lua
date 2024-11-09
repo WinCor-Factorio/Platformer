@@ -1,5 +1,5 @@
-require("__Platformer__/data/recipes.lua")
-require("__Platformer__/data/technologies.lua")
+require("__platformer__/data/recipes.lua")
+require("__platformer__/data/technologies.lua")
 
 -- Disable all technologies
 -- for _, tech in pairs(data.raw.technology) do
