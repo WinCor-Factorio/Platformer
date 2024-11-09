@@ -3,7 +3,6 @@ script.on_init(function(e)
     create_space_platform()
     set_starting_items()
     research_starting_technologies()
-    init_hub_chest()
 end)
 
 script.on_event(defines.events.on_player_created, function(e)
@@ -56,8 +55,4 @@ function disable_cutsceene()
             remote.call("freeplay", "set_disable_crashsite", true)
         end
     end
-end
-
-function init_hub_chest()
-    storage.hub_chests = {}
 end
