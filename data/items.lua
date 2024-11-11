@@ -6,7 +6,7 @@ data:extend(
         {
             type = "item",
             name = "crudeic-asteroid-chunk",
-            icon = "__base__/graphics/icons/coin.png",
+            icon = "__platformer__/graphics/icons/crudeic-asteroid-chunk.png",
             subgroup = "space-material",
             order = "a[metallic]-e[chunk]",
             inventory_move_sound = space_age_item_sounds.rock_inventory_move,
