@@ -49,6 +49,13 @@ data.raw.technology["space-platform"].effects = {
     }
 }
 
+data.raw.technology["oil-processing"].research_trigger = {
+    type = "craft-item",
+    item = "crude-oil-sludge",
+    count = 1
+}
+
+table.insert(data.raw.technology["oil-processing"].effects, { type = "unlock-recipe", recipe="oil_sludge_processing"})
 
 data.raw.technology["steam-power"].effects = {};
 data.raw.technology["electric-mining-drill"].effects = {};

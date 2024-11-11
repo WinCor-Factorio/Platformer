@@ -37,7 +37,7 @@ data.extend({ crude_chunck })
 local oil_sludge_processing = table.deepcopy(data.raw.recipe["thruster-oxidizer"])
 oil_sludge_processing.name = "oil_sludge_processing"
 oil_sludge_processing.localised_name = { "recipe-name.oil_sludge_processing" }
-oil_sludge_processing.icon = "__base__/graphics/icons/coin.png"
+oil_sludge_processing.icon = "__base__/graphics/icons/fluid/crude-oil.png"
 oil_sludge_processing.enabled = false
 oil_sludge_processing.subgroup = "fluid-recipes"
 oil_sludge_processing.ingredients =
