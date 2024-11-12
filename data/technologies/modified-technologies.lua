@@ -55,7 +55,7 @@ data.raw.technology["oil-processing"].research_trigger = {
     count = 1
 }
 
-table.insert(data.raw.technology["oil-processing"].effects, { type = "unlock-recipe", recipe="oil_sludge_processing"})
+table.insert(data.raw.technology["oil-processing"].effects, { type = "unlock-recipe", recipe = "oil_sludge_processing" })
 
 data.raw.technology["steam-power"].effects = {};
 data.raw.technology["electric-mining-drill"].effects = {};

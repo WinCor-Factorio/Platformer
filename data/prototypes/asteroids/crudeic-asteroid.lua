@@ -3,21 +3,52 @@ crudeic_chunk.name = "crudeic-asteroid-chunk"
 crudeic_chunk.icon = "__platformer__/graphics/icons/crudeic-asteroid-chunk.png"
 crudeic_chunk.minable.result = "crudeic-asteroid-chunk"
 
-crudeic_chunk.graphics_set.variations[1].color_texture.filename =
-"__platformer__/graphics/entity/crudeic/chunk/asteroid-crudeic-chunk-colour-01.png"
-crudeic_chunk.graphics_set.variations[2].color_texture.filename =
-"__platformer__/graphics/entity/crudeic/chunk/asteroid-crudeic-chunk-colour-02.png"
-crudeic_chunk.graphics_set.variations[3].color_texture.filename =
-"__platformer__/graphics/entity/crudeic/chunk/asteroid-crudeic-chunk-colour-03.png"
-crudeic_chunk.graphics_set.variations[4].color_texture.filename =
-"__platformer__/graphics/entity/crudeic/chunk/asteroid-crudeic-chunk-colour-04.png"
-crudeic_chunk.graphics_set.variations[5].color_texture.filename =
-"__platformer__/graphics/entity/crudeic/chunk/asteroid-crudeic-chunk-colour-05.png"
-crudeic_chunk.graphics_set.variations[6].color_texture.filename =
-"__platformer__/graphics/entity/crudeic/chunk/asteroid-crudeic-chunk-colour-06.png"
-crudeic_chunk.graphics_set.variations[7].color_texture.filename =
-"__platformer__/graphics/entity/crudeic/chunk/asteroid-crudeic-chunk-colour-07.png"
-crudeic_chunk.graphics_set.variations[8].color_texture.filename =
-"__platformer__/graphics/entity/crudeic/chunk/asteroid-crudeic-chunk-colour-08.png"
-
+for i = 1, 8, 1 do
+    crudeic_chunk.graphics_set.variations[i].color_texture.filename =
+        "__platformer__/graphics/entity/crudeic/chunk/asteroid-crudeic-chunk-colour-0" .. i .. ".png"
+end
 data.extend({ crudeic_chunk })
+
+local crudeic_small = table.deepcopy(data.raw["asteroid"]["small-metallic-asteroid"])
+crudeic_small.name = "small-crudeic-asteroid"
+crudeic_small.icon = "__platformer__/graphics/icons/small-crudeic-asteroid.png"
+crudeic_small.dying_trigger_effect[2].asteroid_name = "crudeic-asteroid-chunk"
+
+for i = 1, 8, 1 do
+    crudeic_small.graphics_set.variations[i].color_texture.filename =
+        "__platformer__/graphics/entity/crudeic/small/asteroid-crudeic-small-colour-0" .. i .. ".png"
+end
+data.extend({ crudeic_small })
+
+local crudeic_medium = table.deepcopy(data.raw["asteroid"]["medium-metallic-asteroid"])
+crudeic_medium.name = "medium-crudeic-asteroid"
+crudeic_medium.icon = "__platformer__/graphics/icons/medium-crudeic-asteroid.png"
+crudeic_medium.dying_trigger_effect[2].asteroid_name = "small-crudeic-asteroid"
+
+for i = 1, 6, 1 do
+    crudeic_medium.graphics_set.variations[i].color_texture.filename =
+        "__platformer__/graphics/entity/crudeic/medium/asteroid-crudeic-medium-colour-0" .. i .. ".png"
+end
+data.extend({ crudeic_medium })
+
+local crudeic_big = table.deepcopy(data.raw["asteroid"]["big-metallic-asteroid"])
+crudeic_big.name = "big-crudeic-asteroid"
+crudeic_big.icon = "__platformer__/graphics/icons/big-crudeic-asteroid.png"
+crudeic_big.dying_trigger_effect[2].asteroid_name = "medium-crudeic-asteroid"
+
+for i = 1, 6, 1 do
+    crudeic_big.graphics_set.variations[i].color_texture.filename =
+        "__platformer__/graphics/entity/crudeic/big/asteroid-crudeic-big-colour-0" .. i .. ".png"
+end
+data.extend({ crudeic_big })
+
+local crudeic_huge = table.deepcopy(data.raw["asteroid"]["huge-metallic-asteroid"])
+crudeic_huge.name = "huge-crudeic-asteroid"
+crudeic_huge.icon = "__platformer__/graphics/icons/huge-crudeic-asteroid.png"
+crudeic_huge.dying_trigger_effect[2].asteroid_name = "big-crudeic-asteroid"
+
+for i = 1, 6, 1 do
+    crudeic_huge.graphics_set.variations[i].color_texture.filename =
+        "__platformer__/graphics/entity/crudeic/huge/asteroid-crudeic-huge-colour-0" .. i .. ".png"
+end
+data.extend({ crudeic_huge })
