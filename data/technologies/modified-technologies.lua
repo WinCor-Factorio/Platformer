@@ -49,6 +49,9 @@ data.raw.technology["space-platform"].effects = {
     }
 }
 
+data.raw.technology["space-platform"].prerequisites = {}
+
+--oil-processing
 data.raw.technology["oil-processing"].research_trigger = {
     type = "craft-item",
     item = "crude-oil-sludge",
@@ -61,13 +64,13 @@ data.raw.technology["oil-gathering"].effects = {{
     recipe = "crudeic-asteroid-crushing"
 }};
 
+--Disabled effects
 data.raw.technology["steam-power"].effects = {};
 data.raw.technology["electric-mining-drill"].effects = {};
 data.raw.technology["flammables"].effects = {};
 data.raw.technology["landfill"].effects = {};
 data.raw.technology["advanced-material-processing"].effects = {};
 data.raw.technology["automobilism"].effects = {};
-
 data.raw.technology["stronger-explosives-1"].effects = {};
 data.raw.technology["stronger-explosives-2"].effects = {};
 data.raw.technology["railway"].effects = {};
