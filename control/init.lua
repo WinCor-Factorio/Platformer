@@ -2,7 +2,6 @@ script.on_init(function(e)
     disable_cutsceene()
     create_space_platform()
     set_starting_items()
-    research_starting_technologies()
 end)
 
 script.on_event(defines.events.on_player_created, function(e)
@@ -42,10 +41,6 @@ function set_starting_items()
         hub.insert({ name = "electric-furnace", count = 4 })
         hub.insert({ name = "transport-belt", count = 100 })
     end
-end
-
-function research_starting_technologies()
-    game.forces["player"].technologies["space-platform"].researched = true;
 end
 
 function disable_cutsceene()
