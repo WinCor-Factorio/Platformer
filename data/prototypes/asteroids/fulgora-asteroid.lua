@@ -26,7 +26,7 @@ local fulgora_medium = table.deepcopy(data.raw["asteroid"]["medium-carbonic-aste
 fulgora_medium.name = "medium-fulgora-asteroid"
 fulgora_medium.icon = "__platformer__/graphics/icons/medium-fulgora-asteroid.png"
 fulgora_medium.dying_trigger_effect[2].asteroid_name = "small-fulgora-asteroid"
-fulgora_medium.order = "a[fulgora]-b[medium]"
+fulgora_medium.order = "a[fulgora]-c[medium]"
 
 for i = 1, 6, 1 do
     fulgora_medium.graphics_set.variations[i].color_texture.filename =
@@ -38,7 +38,7 @@ local fulgora_big = table.deepcopy(data.raw["asteroid"]["big-carbonic-asteroid"]
 fulgora_big.name = "big-fulgora-asteroid"
 fulgora_big.icon = "__platformer__/graphics/icons/big-fulgora-asteroid.png"
 fulgora_big.dying_trigger_effect[2].asteroid_name = "medium-fulgora-asteroid"
-fulgora_big.order = "a[fulgora]-b[big]"
+fulgora_big.order = "a[fulgora]-d[big]"
 
 for i = 1, 6, 1 do
     fulgora_big.graphics_set.variations[i].color_texture.filename =
@@ -50,7 +50,7 @@ local fulgora_huge = table.deepcopy(data.raw["asteroid"]["huge-carbonic-asteroid
 fulgora_huge.name = "huge-fulgora-asteroid"
 fulgora_huge.icon = "__platformer__/graphics/icons/huge-fulgora-asteroid.png"
 fulgora_huge.dying_trigger_effect[2].asteroid_name = "big-fulgora-asteroid"
-fulgora_huge.order = "a[fulgora]-b[huge]"
+fulgora_huge.order = "a[fulgora]-e[huge]"
 
 for i = 1, 7, 1 do
     fulgora_huge.graphics_set.variations[i].color_texture.filename =

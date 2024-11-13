@@ -64,6 +64,17 @@ data.raw.technology["oil-gathering"].effects = { {
     recipe = "crudeic-asteroid-crushing"
 } };
 
+data.raw.technology["advanced-asteroid-processing"].effects = {
+    {
+        type = "unlock-recipe",
+        recipe = "advanced-thruster-fuel"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "advanced-thruster-oxidizer"
+    }
+}
+
 data.raw.technology["planet-discovery-fulgora"].effects = {
     {
         type = "unlock-space-location",
@@ -93,6 +104,8 @@ data.raw.technology["planet-discovery-aquilo"].effects = {
     },
 }
 
+
+
 --Disabled effects
 data.raw.technology["steam-power"].effects = {};
 data.raw.technology["electric-mining-drill"].effects = {};
@@ -108,3 +121,4 @@ data.raw.technology["uranium-mining"].effects = {};
 data.raw.technology["logistic-robotics"].effects = {};
 data.raw.technology["rocket-silo"].effects = {};
 data.raw.technology["tank"].effects = {};
+data.raw.technology["advanced-material-processing-2"].effects = {};

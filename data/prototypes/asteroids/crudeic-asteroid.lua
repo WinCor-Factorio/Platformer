@@ -26,7 +26,7 @@ local crudeic_medium = table.deepcopy(data.raw["asteroid"]["medium-metallic-aste
 crudeic_medium.name = "medium-crudeic-asteroid"
 crudeic_medium.icon = "__platformer__/graphics/icons/medium-crudeic-asteroid.png"
 crudeic_medium.dying_trigger_effect[2].asteroid_name = "small-crudeic-asteroid"
-crudeic_medium.order = "a[crudeic]-b[medium]"
+crudeic_medium.order = "a[crudeic]-c[medium]"
 
 for i = 1, 6, 1 do
     crudeic_medium.graphics_set.variations[i].color_texture.filename =
@@ -38,7 +38,7 @@ local crudeic_big = table.deepcopy(data.raw["asteroid"]["big-metallic-asteroid"]
 crudeic_big.name = "big-crudeic-asteroid"
 crudeic_big.icon = "__platformer__/graphics/icons/big-crudeic-asteroid.png"
 crudeic_big.dying_trigger_effect[2].asteroid_name = "medium-crudeic-asteroid"
-crudeic_big.order = "a[crudeic]-b[big]"
+crudeic_big.order = "a[crudeic]-d[big]"
 
 for i = 1, 6, 1 do
     crudeic_big.graphics_set.variations[i].color_texture.filename =
@@ -50,7 +50,7 @@ local crudeic_huge = table.deepcopy(data.raw["asteroid"]["huge-metallic-asteroid
 crudeic_huge.name = "huge-crudeic-asteroid"
 crudeic_huge.icon = "__platformer__/graphics/icons/huge-crudeic-asteroid.png"
 crudeic_huge.dying_trigger_effect[2].asteroid_name = "big-crudeic-asteroid"
-crudeic_huge.order = "a[crudeic]-b[huge]"
+crudeic_huge.order = "a[crudeic]-e[huge]"
 
 for i = 1, 6, 1 do
     crudeic_huge.graphics_set.variations[i].color_texture.filename =

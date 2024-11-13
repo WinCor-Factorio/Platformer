@@ -12,7 +12,8 @@ starting_chunck.results =
 {
     { type = "item", name = "iron-ore",   amount_min = 1, amount_max = 10 },
     { type = "item", name = "copper-ore", amount_min = 1, amount_max = 5 },
-    { type = "item", name = "stone",      amount_min = 1, amount_max = 5 }
+    { type = "item", name = "stone",      amount_min = 1, amount_max = 5 },
+    { type = "item", name = "ice",        amount = 1,     probability = 0.1 }
 }
 data.extend({ starting_chunck })
 
@@ -29,6 +30,7 @@ crude_chunck.ingredients =
 crude_chunck.results =
 {
     { type = "item", name = "crude-oil-sludge", amount_min = 1, amount_max = 3 },
+    { type = "item", name = "coal",             amount_min = 1, amount_max = 3 },
 }
 data.extend({ crude_chunck })
 
