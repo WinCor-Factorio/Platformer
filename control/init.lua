@@ -2,18 +2,30 @@ script.on_init(function(e)
     disable_cutsceene()
     create_space_platform()
     set_starting_items()
+    create_permission_group()
 end)
 
 script.on_event(defines.events.on_player_created, function(e)
     local player = game.players[e.player_index]
 
+    local group = game.permissions.get_group("players")
+    if group then
+        group.add_player(player)
+    end
+
     if player.character ~= nil then
         player.character.destroy()
     end
+
     player.teleport({ x = 0, y = 0 }, storage.platform.surface.name)
 end)
 
-script.on_event(defines.)
+function create_permission_group()
+    local group = game.permissions.create_group("players")
+    if group then
+        group.set_allows_action(defines.input_action.land_at_planet, false)
+    end
+end
 
 function create_space_platform()
     local force = game.forces["player"]
