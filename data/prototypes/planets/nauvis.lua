@@ -8,3 +8,22 @@ planet.asteroid_spawn_definitions = {
         type = "asteroid-chunk"
     }
 }
+-- planet.map_gen_settings = { -- This works but prevents the player from spawning. Needs more work.
+--     autoplace_controls = {},
+--     autoplace_settings = {
+--         ["entity"] = {
+--             treat_missing_as_default = false,
+--             settings = {}
+--         },
+--         ["decorative"] = {
+--             treat_missing_as_default = false,
+--             settings = {}
+--         },
+--         ["tile"] = {
+--             treat_missing_as_default = false,
+--             settings = {
+--                 ["empty-space"] = {}
+--             }
+--         }
+--     },
+-- }

@@ -8,16 +8,18 @@ script.on_event(defines.events.on_player_created, function(e)
     local player = game.players[e.player_index]
 
     if player.character ~= nil then
-        player.character = nil
+        player.character.destroy()
     end
     player.teleport({ x = 0, y = 0 }, storage.platform.surface.name)
 end)
+
+script.on_event(defines.)
 
 function create_space_platform()
     local force = game.forces["player"]
     platform = force.create_space_platform({
         name = "Base One",
-        planet = "nauvis-planet",
+        planet = "nauvis",
         starter_pack = "space-platform-starter-pack"
     })
 

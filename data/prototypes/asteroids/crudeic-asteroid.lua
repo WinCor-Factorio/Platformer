@@ -2,6 +2,7 @@ local crudeic_chunk = table.deepcopy(data.raw["asteroid-chunk"]["metallic-astero
 crudeic_chunk.name = "crudeic-asteroid-chunk"
 crudeic_chunk.icon = "__platformer__/graphics/icons/crudeic-asteroid-chunk.png"
 crudeic_chunk.minable.result = "crudeic-asteroid-chunk"
+crudeic_chunk.order = "a[crudeic]-a[chunck]"
 
 for i = 1, 8, 1 do
     crudeic_chunk.graphics_set.variations[i].color_texture.filename =
@@ -13,6 +14,7 @@ local crudeic_small = table.deepcopy(data.raw["asteroid"]["small-metallic-astero
 crudeic_small.name = "small-crudeic-asteroid"
 crudeic_small.icon = "__platformer__/graphics/icons/small-crudeic-asteroid.png"
 crudeic_small.dying_trigger_effect[2].asteroid_name = "crudeic-asteroid-chunk"
+crudeic_small.order = "a[crudeic]-b[small]"
 
 for i = 1, 8, 1 do
     crudeic_small.graphics_set.variations[i].color_texture.filename =
@@ -24,6 +26,7 @@ local crudeic_medium = table.deepcopy(data.raw["asteroid"]["medium-metallic-aste
 crudeic_medium.name = "medium-crudeic-asteroid"
 crudeic_medium.icon = "__platformer__/graphics/icons/medium-crudeic-asteroid.png"
 crudeic_medium.dying_trigger_effect[2].asteroid_name = "small-crudeic-asteroid"
+crudeic_medium.order = "a[crudeic]-b[medium]"
 
 for i = 1, 6, 1 do
     crudeic_medium.graphics_set.variations[i].color_texture.filename =
@@ -35,6 +38,7 @@ local crudeic_big = table.deepcopy(data.raw["asteroid"]["big-metallic-asteroid"]
 crudeic_big.name = "big-crudeic-asteroid"
 crudeic_big.icon = "__platformer__/graphics/icons/big-crudeic-asteroid.png"
 crudeic_big.dying_trigger_effect[2].asteroid_name = "medium-crudeic-asteroid"
+crudeic_big.order = "a[crudeic]-b[big]"
 
 for i = 1, 6, 1 do
     crudeic_big.graphics_set.variations[i].color_texture.filename =
@@ -46,6 +50,7 @@ local crudeic_huge = table.deepcopy(data.raw["asteroid"]["huge-metallic-asteroid
 crudeic_huge.name = "huge-crudeic-asteroid"
 crudeic_huge.icon = "__platformer__/graphics/icons/huge-crudeic-asteroid.png"
 crudeic_huge.dying_trigger_effect[2].asteroid_name = "big-crudeic-asteroid"
+crudeic_huge.order = "a[crudeic]-b[huge]"
 
 for i = 1, 6, 1 do
     crudeic_huge.graphics_set.variations[i].color_texture.filename =
