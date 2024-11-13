@@ -81,6 +81,10 @@ data.raw.technology["planet-discovery-fulgora"].effects = {
         space_location = "fulgora",
         use_icon_overlay_constant = true
     },
+    {
+        type = "unlock-recipe",
+        recipe = "fulgora-asteroid-crushing"
+    }
 }
 data.raw.technology["planet-discovery-gleba"].effects = {
     {
@@ -88,6 +92,10 @@ data.raw.technology["planet-discovery-gleba"].effects = {
         space_location = "gleba",
         use_icon_overlay_constant = true
     },
+    {
+        type = "unlock-recipe",
+        recipe = "gleba-asteroid-crushing"
+    }
 }
 data.raw.technology["planet-discovery-vulcanus"].effects = {
     {
@@ -95,6 +103,10 @@ data.raw.technology["planet-discovery-vulcanus"].effects = {
         space_location = "vulcanus",
         use_icon_overlay_constant = true
     },
+    {
+        type = "unlock-recipe",
+        recipe = "vulcanus-asteroid-crushing"
+    }
 }
 data.raw.technology["planet-discovery-aquilo"].effects = {
     {
@@ -102,6 +114,10 @@ data.raw.technology["planet-discovery-aquilo"].effects = {
         space_location = "aquilo",
         use_icon_overlay_constant = true
     },
+    {
+        type = "unlock-recipe",
+        recipe = "aquilo-asteroid-crushing"
+    }
 }
 
 
