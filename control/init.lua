@@ -18,7 +18,7 @@ function create_space_platform()
     local force = game.forces["player"]
     platform = force.create_space_platform({
         name = "Base One",
-        planet = "void",
+        planet = "nauvis-planet",
         starter_pack = "space-platform-starter-pack"
     })
 
@@ -34,7 +34,7 @@ function set_starting_items()
     local hub = storage.platform.hub
     if hub then
         hub.insert({ name = "crusher", count = 2 })
-        hub.insert({ name = "asteroid-collector", count = 4 })
+        hub.insert({ name = "asteroid-collector", count = 2 })
         hub.insert({ name = "assembling-machine-1", count = 10 })
         hub.insert({ name = "inserter", count = 50 })
         hub.insert({ name = "solar-panel", count = 10 })
