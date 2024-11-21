@@ -1,0 +1,62 @@
+local spaceConnection = data.raw["space-connection"]["gleba-fulgora"]
+spaceConnection.length = 125000
+spaceConnection.asteroid_spawn_definitions = {
+    {
+        asteroid = "medium-gleba-asteroid",
+        spawn_points = {
+            {
+                distance = 0,
+                probability = 0,
+                speed = 1,
+                angle_when_stopped = 0.25
+            },
+            {
+                distance = 0.1,
+                probability = 0.015,
+                speed = 0.040,
+                angle_when_stopped = 0.25
+            },
+            {
+                distance = 0.9,
+                probability = 0.0005,
+                speed = 0.040,
+                angle_when_stopped = 0.25
+            },
+            {
+                distance = 1,
+                probability = 0,
+                speed = 1,
+                angle_when_stopped = 0.25
+            }
+        }
+    },
+    {
+        asteroid = "medium-fulgora-asteroid",
+        spawn_points = {
+            {
+                distance = 0,
+                probability = 0,
+                speed = 1,
+                angle_when_stopped = 0.25
+            },
+            {
+                distance = 0.1,
+                probability = 0.0005,
+                speed = 0.040,
+                angle_when_stopped = 0.25
+            },
+            {
+                distance = 0.9,
+                probability = 0.015,
+                speed = 0.040,
+                angle_when_stopped = 0.25
+            },
+            {
+                distance = 1,
+                probability = 0,
+                speed = 1,
+                angle_when_stopped = 0.25
+            }
+        }
+    }
+}
