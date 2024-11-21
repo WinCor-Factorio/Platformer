@@ -59,6 +59,7 @@ data.raw.technology["oil-processing"].research_trigger = {
 }
 
 table.insert(data.raw.technology["oil-processing"].effects, { type = "unlock-recipe", recipe = "oil_sludge_processing" })
+
 data.raw.technology["oil-gathering"].effects = { {
     type = "unlock-recipe",
     recipe = "crudeic-asteroid-crushing"
@@ -119,7 +120,62 @@ data.raw.technology["planet-discovery-aquilo"].effects = {
         recipe = "aquilo-asteroid-crushing"
     }
 }
-
+data.raw.technology["agriculture"].research_trigger = nil
+data.raw.technology["agriculture"].unit =
+{
+    ingredients =
+    {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack",   1 },
+        { "chemical-science-pack",   1 },
+        { "space-science-pack",      1 }
+    },
+    time = 60,
+    count = 400
+}
+data.raw.technology["calcite-processing"].research_trigger = {
+    type = "craft-item",
+    item = "calcite",
+    count = 10
+}
+data.raw.technology["heating-tower"].research_trigger = nil
+data.raw.technology["heating-tower"].unit =
+{
+    ingredients =
+    {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack",   1 },
+        { "chemical-science-pack",   1 },
+        { "space-science-pack",      1 }
+    },
+    time = 60,
+    count = 100
+}
+data.raw.technology["jellynut"].research_trigger = {
+    type = "craft-item",
+    item = "jellynut",
+    count = 100
+}
+data.raw.technology["yumako"].research_trigger = {
+    type = "craft-item",
+    item = "yumako",
+    count = 100
+}
+data.raw.technology["tungsten-carbide"].research_trigger = {
+    type = "craft-item",
+    item = "tungsten-ore",
+    count = 100
+}
+data.raw.technology["tungsten-steel"].research_trigger = {
+    type = "craft-item",
+    item = "tungsten-ore",
+    count = 300
+}
+data.raw.technology["lithium-processing"].research_trigger = {
+    type = "craft-item",
+    item = "lithium-ore",
+    count = 300
+}
 
 
 --Disabled effects
