@@ -118,3 +118,10 @@ data:extend(
         },
     }
 )
+
+
+local steelChest = data.raw["container"]["steel-chest"]
+
+steelChest.surface_conditions = { { min = 0, max = 0, property = "gravity" } }
+
+
