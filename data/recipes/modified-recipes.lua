@@ -23,5 +23,5 @@ data.raw.recipe["crusher"].ingredients = {
 data.raw.recipe["asteroid-collector"].ingredients = {
     { type = "item", name = "electronic-circuit", amount = 20},
     { type = "item", name = "engine-unit", amount = 8},
-    { type = "item", name = "iron-gear-wheel", amount = 20}
+    { type = "item", name = "long-handed-inserter", amount = 2}
 }
