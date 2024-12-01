@@ -46,6 +46,10 @@ data.raw.technology["space-platform"].effects = {
     {
         type = "unlock-recipe",
         recipe = "cargo-bay"
+    },
+    {
+        type = "create-ghost-on-entity-death",
+        modifier = true
     }
 }
 
@@ -107,6 +111,10 @@ data.raw.technology["planet-discovery-vulcanus"].effects = {
     {
         type = "unlock-recipe",
         recipe = "vulcanus-asteroid-crushing"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "lava_stone_processing"
     }
 }
 data.raw.technology["planet-discovery-aquilo"].effects = {
