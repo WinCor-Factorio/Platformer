@@ -123,7 +123,7 @@ data.raw.technology["planet-discovery-aquilo"].effects = {
 
 
 --Disabled effects
-data.raw.technology["steam-power"].effects = {};
+--data.raw.technology["steam-power"].effects = {};
 data.raw.technology["electric-mining-drill"].effects = {};
 data.raw.technology["flammables"].effects = {};
 data.raw.technology["landfill"].effects = {};
