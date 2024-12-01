@@ -2,7 +2,7 @@
 local gleba_chunck = table.deepcopy(data.raw.recipe["metallic-asteroid-crushing"])
 gleba_chunck.name = "gleba-asteroid-crushing"
 gleba_chunck.localised_name = { "recipe-name.gleba-asteroid-crushing" }
-gleba_chunck.icon = "__base__/graphics/icons/coin.png"
+gleba_chunck.icon = "__space-age__/graphics/icons/carbonic-asteroid-crushing.png"
 gleba_chunck.enabled = false
 gleba_chunck.ingredients =
 {

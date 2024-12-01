@@ -2,7 +2,7 @@
 local vulcanus_chunck = table.deepcopy(data.raw.recipe["metallic-asteroid-crushing"])
 vulcanus_chunck.name = "vulcanus-asteroid-crushing"
 vulcanus_chunck.localised_name = { "recipe-name.vulcanus-asteroid-crushing" }
-vulcanus_chunck.icon = "__base__/graphics/icons/coin.png"
+vulcanus_chunck.icon = "__platformer__/graphics/icons/vulcanus-asteroid-crushing.png"
 vulcanus_chunck.enabled = false
 vulcanus_chunck.ingredients =
 {

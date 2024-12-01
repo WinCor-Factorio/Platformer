@@ -21,7 +21,7 @@ data.extend({ starting_chunck })
 local crude_chunck = table.deepcopy(data.raw.recipe["metallic-asteroid-crushing"])
 crude_chunck.name = "crudeic-asteroid-crushing"
 crude_chunck.localised_name = { "recipe-name.crudeic-asteroid-crushing" }
-crude_chunck.icon = "__base__/graphics/icons/crude-oil-resource.png"
+crude_chunck.icon = "__platformer__/graphics/icons/crudeic-asteroid-crushing.png"
 crude_chunck.enabled = false
 crude_chunck.ingredients =
 {

@@ -19,7 +19,7 @@ data:extend(
         {
             type = "item",
             name = "gleba-asteroid-chunk",
-            icon = "__base__/graphics/icons/coin.png",
+            icon = "__space-age__/graphics/icons/carbonic-asteroid-chunk.png",
             subgroup = "space-material",
             order = "a[gleba]-e[chunk]",
             inventory_move_sound = space_age_item_sounds.rock_inventory_move,
@@ -45,7 +45,7 @@ data:extend(
         {
             type = "item",
             name = "vulcanus-asteroid-chunk",
-            icon = "__base__/graphics/icons/coin.png",
+            icon = "__platformer__/graphics/icons/vulcanus-asteroid-chunk.png",
             subgroup = "space-material",
             order = "a[vulcanus]-e[chunk]",
             inventory_move_sound = space_age_item_sounds.rock_inventory_move,
@@ -58,7 +58,7 @@ data:extend(
         {
             type = "item",
             name = "aquilo-asteroid-chunk",
-            icon = "__base__/graphics/icons/coin.png",
+            icon = "__space-age__/graphics/icons/oxide-asteroid-chunk.png",
             subgroup = "space-material",
             order = "a[aquilo]-e[chunk]",
             inventory_move_sound = space_age_item_sounds.rock_inventory_move,
@@ -123,5 +123,3 @@ data:extend(
 local steelChest = data.raw["container"]["steel-chest"]
 
 steelChest.surface_conditions = { { min = 0, max = 0, property = "gravity" } }
-
-
