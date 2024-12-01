@@ -187,7 +187,7 @@ data.raw.technology["lithium-processing"].research_trigger = {
 
 
 --Disabled effects
-data.raw.technology["steam-power"].effects = {};
+--data.raw.technology["steam-power"].effects = {};
 data.raw.technology["electric-mining-drill"].effects = {};
 data.raw.technology["flammables"].effects = {};
 data.raw.technology["landfill"].effects = {};
