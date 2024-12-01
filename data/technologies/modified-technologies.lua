@@ -185,9 +185,7 @@ data.raw.technology["lithium-processing"].research_trigger = {
     count = 300
 }
 
-
 --Disabled effects
---data.raw.technology["steam-power"].effects = {};
 data.raw.technology["electric-mining-drill"].effects = {};
 data.raw.technology["flammables"].effects = {};
 data.raw.technology["landfill"].effects = {};
@@ -202,3 +200,4 @@ data.raw.technology["logistic-robotics"].effects = {};
 data.raw.technology["rocket-silo"].effects = {};
 data.raw.technology["tank"].effects = {};
 data.raw.technology["advanced-material-processing-2"].effects = {};
+data.raw.technology["asteroid-reprocessing"].effects = {}
