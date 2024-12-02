@@ -3,6 +3,8 @@ script.on_init(function(e)
     create_space_platform()
     set_starting_items()
     create_permission_group()
+    shrink_the_world(game.surfaces[1])
+    delete_all_chunks(game.surfaces[1])
 end)
 
 script.on_event(defines.events.on_player_created, function(e)
@@ -19,6 +21,21 @@ script.on_event(defines.events.on_player_created, function(e)
 
     player.teleport({ x = 0, y = 0 }, storage.platform.surface.name)
 end)
+
+script.on_event(defines.events.on_surface_created, function(event)
+    shrink_the_world(game.surfaces[event.surface_index])
+end)
+
+function delete_all_chunks(surface)
+    for chunk in surface.get_chunks() do
+        surface.delete_chunk({ chunk.x, chunk.y })
+    end
+end
+
+function shrink_the_world(surface)
+    local map_settings = { width = 1, height = 1 }
+    surface.map_gen_settings = map_settings
+end
 
 function create_permission_group()
     local group = game.permissions.create_group("players")
