@@ -83,7 +83,7 @@ data:extend(
         {
             type = "item",
             name = "lava-stone",
-            icon = "__Krastorio2Assets__/icons/items/enriched-copper.png",
+            icon = "__platformer__/graphics/icons/lava-stone.png",
             subgroup = "raw-resource",
             order = "b[lava-stone]",
             inventory_move_sound = space_age_item_sounds.rock_inventory_move,
@@ -95,7 +95,7 @@ data:extend(
         {
             type = "item",
             name = "cryolitic-ore",
-            icon = "__Krastorio2Assets__/icons/items/imersite-crystal.png",
+            icon = "__platformer__/graphics/icons/cryolitic-ore.png",
             subgroup = "raw-resource",
             order = "b[cryolitic-ore]",
             inventory_move_sound = space_age_item_sounds.rock_inventory_move,
@@ -107,7 +107,7 @@ data:extend(
         {
             type = "item",
             name = "lithium-ore",
-            icon = "__Krastorio2Assets__/icons/items/quartz-2.png",
+            icon = "__platformer__/graphics/icons/lithium-ore.png",
             subgroup = "raw-resource",
             order = "b[lithium-ore]",
             inventory_move_sound = space_age_item_sounds.rock_inventory_move,
