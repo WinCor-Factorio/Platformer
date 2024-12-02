@@ -28,6 +28,16 @@ data.raw.technology["space-science-pack"].prerequisites =
     "chemical-science-pack",
     "production-science-pack"
 }
+data.raw.technology["space-science-pack"].effects = {
+    {
+        type = "unlock-recipe",
+        recipe = "space-science-pack"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "carbon"
+    },
+}
 
 --space-platform
 data.raw.technology["space-platform"].effects = {
@@ -55,7 +65,7 @@ data.raw.technology["space-platform"].effects = {
         type = "unlock-space-platforms",
         modifier = true,
         hidden = true
-      },
+    },
 }
 
 data.raw.technology["space-platform"].prerequisites = {}
@@ -200,5 +210,12 @@ data.raw.technology["space-platform-thruster"].effects = {
     {
         type = "unlock-recipe",
         recipe = "thruster-oxidizer"
+    }
+}
+
+data.raw.technology["tungsten-carbide"].effects = {
+    {
+        type = "unlock-recipe",
+        recipe = "tungsten-carbide"
     }
 }
