@@ -1,6 +1,6 @@
 require("__platformer__/data/recipes/recipes.lua")
 require("__platformer__/data/technologies/technologies.lua")
-require("__platformer__/data/items.lua")
+require("__platformer__/data/items/items.lua")
 
 require("__platformer__/data/prototypes/planets/nauvis.lua")
 require("__platformer__/data/prototypes/planets/vulcanus.lua")
