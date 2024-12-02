@@ -1,5 +1,6 @@
 data.raw.recipe["space-platform-foundation"].ingredients = {
-    { type = "item", name = "iron-plate", amount = 10 }
+    { type = "item", name = "iron-plate",   amount = 10 },
+    { type = "item", name = "copper-cable", amount = 5 }
 }
 
 data.raw.recipe["electric-furnace"].ingredients = {
