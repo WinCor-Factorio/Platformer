@@ -30,6 +30,7 @@ lava_stone_processing.ingredients =
 }
 lava_stone_processing.results =
 {
-    { type = "fluid", name = "lava", amount = 10 },
+    { type = "fluid", name = "lava",          amount = 15 },
+    { type = "fluid", name = "sulfuric-acid", amount = 5 }
 }
 data.extend({ lava_stone_processing })
