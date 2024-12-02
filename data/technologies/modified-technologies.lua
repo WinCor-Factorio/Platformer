@@ -219,3 +219,41 @@ data.raw.technology["tungsten-carbide"].effects = {
         recipe = "tungsten-carbide"
     }
 }
+
+data.raw.technology["engine"].effects = {
+    {
+        type = "unlock-recipe",
+        recipe = "engine-unit"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "pipe-to-ground"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "pipe"
+    }
+}
+
+data.raw.technology["steam-power"].effects = {
+    {
+        type = "unlock-recipe",
+        recipe = "boiler"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "steam-engine"
+    }
+}
+data.raw.technology["steam-power"].prerequisites = { "water-processing" }
+data.raw.technology["steam-power"].research_trigger = nil
+data.raw.technology["steam-power"].unit =
+{
+    ingredients =
+    {
+        { "automation-science-pack", 1 },
+        { "logistic-science-pack",   1 },
+    },
+    time = 60,
+    count = 200
+}
