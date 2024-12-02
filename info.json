@@ -1,14 +1,13 @@
 {
   "name": "platformer",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "title": "Platformer",
   "author": "Corlin & Xiroc",
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0.0",
     "space-age >= 2.0.14",
-    "space-platform-chests >= 1.0.4",
-    "Krastorio2Assets >= 2.0.0"
+    "space-platform-chests >= 1.0.4"
   ],
   "description": "In a remote corner of the universe, you find yourself adrift on a solitary space platform. With only passing asteroids to sustain you, your progression hinges on your ability to gather resources from these wandering celestial bodies."
 }
