@@ -2,6 +2,7 @@ data:extend({
     {
         type = "technology",
         name = "water-processing",
+        essential = true,
         icon_size = 1024,
         icon = "__platformer__/graphics/technology/ice-melting-transformed.png",
         effects =
