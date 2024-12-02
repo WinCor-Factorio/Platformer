@@ -1,7 +1,7 @@
 local aquilo_chunk = table.deepcopy(data.raw["asteroid-chunk"]["oxide-asteroid-chunk"])
 aquilo_chunk.name = "aquilo-asteroid-chunk"
 aquilo_chunk.minable.result = "aquilo-asteroid-chunk"
-aquilo_chunk.order = "a[aquilo]-a[chunck]"
+aquilo_chunk.order = "a[aquilo]-a[chunk]"
 data.extend({ aquilo_chunk })
 
 local aquilo_small = table.deepcopy(data.raw["asteroid"]["small-oxide-asteroid"])

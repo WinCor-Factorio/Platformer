@@ -1,21 +1,21 @@
--- Vulcanus chunck processing
-local vulcanus_chunck = table.deepcopy(data.raw.recipe["metallic-asteroid-crushing"])
-vulcanus_chunck.name = "vulcanus-asteroid-crushing"
-vulcanus_chunck.localised_name = { "recipe-name.vulcanus-asteroid-crushing" }
-vulcanus_chunck.icon = "__platformer__/graphics/icons/vulcanus-asteroid-crushing.png"
-vulcanus_chunck.enabled = false
-vulcanus_chunck.ingredients =
+-- Vulcanus chunk processing
+local vulcanus_chunk = table.deepcopy(data.raw.recipe["metallic-asteroid-crushing"])
+vulcanus_chunk.name = "vulcanus-asteroid-crushing"
+vulcanus_chunk.localised_name = { "recipe-name.vulcanus-asteroid-crushing" }
+vulcanus_chunk.icon = "__platformer__/graphics/icons/vulcanus-asteroid-crushing.png"
+vulcanus_chunk.enabled = false
+vulcanus_chunk.ingredients =
 {
     { type = "item", name = "vulcanus-asteroid-chunk", amount = 1 }
 }
-vulcanus_chunck.results =
+vulcanus_chunk.results =
 {
     { type = "item", name = "tungsten-ore", amount = 1,     probability = 0.1 },
     { type = "item", name = "lava-stone",   amount_min = 1, amount_max = 2 },
     { type = "item", name = "calcite",      amount_min = 1, amount_max = 10 },
 
 }
-data.extend({ vulcanus_chunck })
+data.extend({ vulcanus_chunk })
 
 -- Lava-stone to lava
 local lava_stone_processing = table.deepcopy(data.raw.recipe["thruster-oxidizer"])

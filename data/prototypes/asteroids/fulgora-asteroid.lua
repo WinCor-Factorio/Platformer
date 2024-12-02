@@ -2,7 +2,7 @@ local fulgora_chunk = table.deepcopy(data.raw["asteroid-chunk"]["carbonic-astero
 fulgora_chunk.name = "fulgora-asteroid-chunk"
 fulgora_chunk.icon = "__platformer__/graphics/icons/fulgora-asteroid-chunk.png"
 fulgora_chunk.minable.result = "fulgora-asteroid-chunk"
-fulgora_chunk.order = "a[fulgora]-a[chunck]"
+fulgora_chunk.order = "a[fulgora]-a[chunk]"
 
 for i = 1, 7, 1 do
     fulgora_chunk.graphics_set.variations[i].color_texture.filename =

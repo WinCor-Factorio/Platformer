@@ -2,7 +2,7 @@ local vulcanus_chunk = table.deepcopy(data.raw["asteroid-chunk"]["oxide-asteroid
 vulcanus_chunk.name = "vulcanus-asteroid-chunk"
 vulcanus_chunk.icon = "__platformer__/graphics/icons/vulcanus-asteroid-chunk.png"
 vulcanus_chunk.minable.result = "vulcanus-asteroid-chunk"
-vulcanus_chunk.order = "a[vulcanus]-a[chunck]"
+vulcanus_chunk.order = "a[vulcanus]-a[chunk]"
 
 for i = 1, 6, 1 do
     vulcanus_chunk.graphics_set.variations[i].color_texture.filename =

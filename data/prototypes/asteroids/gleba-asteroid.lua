@@ -1,7 +1,7 @@
 local gleba_chunk = table.deepcopy(data.raw["asteroid-chunk"]["carbonic-asteroid-chunk"])
 gleba_chunk.name = "gleba-asteroid-chunk"
 gleba_chunk.minable.result = "gleba-asteroid-chunk"
-gleba_chunk.order = "a[gleba]-a[chunck]"
+gleba_chunk.order = "a[gleba]-a[chunk]"
 data.extend({ gleba_chunk })
 
 local gleba_small = table.deepcopy(data.raw["asteroid"]["small-carbonic-asteroid"])

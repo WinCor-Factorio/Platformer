@@ -2,7 +2,7 @@ local crudeic_chunk = table.deepcopy(data.raw["asteroid-chunk"]["metallic-astero
 crudeic_chunk.name = "crudeic-asteroid-chunk"
 crudeic_chunk.icon = "__platformer__/graphics/icons/crudeic-asteroid-chunk.png"
 crudeic_chunk.minable.result = "crudeic-asteroid-chunk"
-crudeic_chunk.order = "a[crudeic]-a[chunck]"
+crudeic_chunk.order = "a[crudeic]-a[chunk]"
 
 for i = 1, 8, 1 do
     crudeic_chunk.graphics_set.variations[i].color_texture.filename =
