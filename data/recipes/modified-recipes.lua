@@ -42,3 +42,7 @@ data.raw.recipe["scrap-recycling"].results = {
     { type = "item", name = "copper-cable",          amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false },
     { type = "item", name = "carbon",                amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false }
 }
+
+-- Hidden recipes
+data.raw.recipe["iron-chest"].hidden = true;
+data.raw.recipe["wooden-chest"].hidden = true;
