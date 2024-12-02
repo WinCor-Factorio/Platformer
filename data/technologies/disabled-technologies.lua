@@ -1,17 +1,8 @@
 --Disabled effects
-data.raw.technology["electric-mining-drill"].effects = {};
-data.raw.technology["flammables"].effects = {};
-data.raw.technology["landfill"].effects = {};
 data.raw.technology["advanced-material-processing"].effects = {};
-data.raw.technology["automobilism"].effects = {};
-data.raw.technology["stronger-explosives-1"].effects = {};
-data.raw.technology["stronger-explosives-2"].effects = {};
-data.raw.technology["railway"].effects = {};
-data.raw.technology["electric-energy-distribution-1"].effects = {};
 data.raw.technology["uranium-mining"].effects = {};
 data.raw.technology["logistic-robotics"].effects = {};
 data.raw.technology["rocket-silo"].effects = {};
-data.raw.technology["tank"].effects = {};
 data.raw.technology["advanced-material-processing-2"].effects = {};
 data.raw.technology["asteroid-reprocessing"].effects = {}
 
@@ -23,11 +14,6 @@ data.raw.technology["belt-immunity-equipment"].enabled = false;
 data.raw.technology["night-vision-equipment"].enabled = false;
 data.raw.technology["modular-armor"].enabled = false;
 data.raw.technology["solar-panel-equipment"].enabled = false;
-data.raw.technology["stronger-explosives-3"].enabled = false;
-data.raw.technology["stronger-explosives-4"].enabled = false;
-data.raw.technology["stronger-explosives-5"].enabled = false;
-data.raw.technology["stronger-explosives-6"].enabled = false;
-data.raw.technology["stronger-explosives-7"].enabled = false;
 data.raw.technology["toolbelt"].enabled = false;
 data.raw.technology["electric-energy-distribution-2"].enabled = false;
 data.raw.technology["automated-rail-transportation"].enabled = false;
