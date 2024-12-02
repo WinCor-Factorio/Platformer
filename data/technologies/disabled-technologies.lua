@@ -1,4 +1,21 @@
--- Disable selected technologies
+--Disabled effects
+data.raw.technology["electric-mining-drill"].effects = {};
+data.raw.technology["flammables"].effects = {};
+data.raw.technology["landfill"].effects = {};
+data.raw.technology["advanced-material-processing"].effects = {};
+data.raw.technology["automobilism"].effects = {};
+data.raw.technology["stronger-explosives-1"].effects = {};
+data.raw.technology["stronger-explosives-2"].effects = {};
+data.raw.technology["railway"].effects = {};
+data.raw.technology["electric-energy-distribution-1"].effects = {};
+data.raw.technology["uranium-mining"].effects = {};
+data.raw.technology["logistic-robotics"].effects = {};
+data.raw.technology["rocket-silo"].effects = {};
+data.raw.technology["tank"].effects = {};
+data.raw.technology["advanced-material-processing-2"].effects = {};
+data.raw.technology["asteroid-reprocessing"].effects = {}
+
+-- Disabled technologies
 data.raw.technology["heavy-armor"].enabled = false;
 data.raw.technology["steel-axe"].enabled = false;
 data.raw.technology["battery-equipment"].enabled = false;

@@ -14,7 +14,7 @@ data:extend(
             drop_sound = space_age_item_sounds.rock_inventory_move,
             stack_size = 1,
             weight = 100 * kg,
-            random_tint_color = item_tints.iron_rust
+            random_tint_color = item_tints.iron_rust,
         },
         {
             type = "item",
@@ -27,7 +27,7 @@ data:extend(
             drop_sound = space_age_item_sounds.rock_inventory_move,
             stack_size = 1,
             weight = 100 * kg,
-            random_tint_color = item_tints.iron_rust
+            random_tint_color = item_tints.iron_rust,
         },
         {
             type = "item",
@@ -40,7 +40,7 @@ data:extend(
             drop_sound = space_age_item_sounds.rock_inventory_move,
             stack_size = 1,
             weight = 100 * kg,
-            random_tint_color = item_tints.iron_rust
+            random_tint_color = item_tints.iron_rust,
         },
         {
             type = "item",
@@ -53,7 +53,7 @@ data:extend(
             drop_sound = space_age_item_sounds.rock_inventory_move,
             stack_size = 1,
             weight = 100 * kg,
-            random_tint_color = item_tints.iron_rust
+            random_tint_color = item_tints.iron_rust,
         },
         {
             type = "item",
@@ -66,7 +66,7 @@ data:extend(
             drop_sound = space_age_item_sounds.rock_inventory_move,
             stack_size = 1,
             weight = 100 * kg,
-            random_tint_color = item_tints.iron_rust
+            random_tint_color = item_tints.iron_rust,
         },
         {
             type = "item",
@@ -118,8 +118,3 @@ data:extend(
         },
     }
 )
-
-
-local steelChest = data.raw["container"]["steel-chest"]
-steelChest.surface_conditions = { { min = 0, max = 0, property = "gravity" } }
-steelChest.inventory_size = 1;
