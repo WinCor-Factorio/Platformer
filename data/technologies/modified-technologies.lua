@@ -50,7 +50,12 @@ data.raw.technology["space-platform"].effects = {
     {
         type = "create-ghost-on-entity-death",
         modifier = true
-    }
+    },
+    {
+        type = "unlock-space-platforms",
+        modifier = true,
+        hidden = true
+      },
 }
 
 data.raw.technology["space-platform"].prerequisites = {}
