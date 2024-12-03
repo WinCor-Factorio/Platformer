@@ -58,7 +58,6 @@ itemsToHide = {
         "iron-chest"
     },
     rail_planner = {
-        "rail",
         "rail-ramp"
     },
     item_with_entity_data = {
@@ -131,25 +130,25 @@ itemsToHide = {
         "artillery-shell",
         "flamethrower-ammo"
     },
-    spider_vehicle = {"spidertron"},
-    artillery_wagon = {"artillery-wagon"},
-    fluid_wagon = {"fluid-wagon"},
-    cargo_wagon = {"cargo-wagon"},
-    locomotive = {"locomotive"},
-    rail_chain_signal = {"rail-chain-signal"},
-    rail_signal = {"rail-signal"},
-    train_stop = {"train-stop"},
-    rail_support = {"rail-support"},
-    rail_ramp = {"rail-ramp"},
-    logistic_robot = {"logistic-robot"},
-    construction_robot = {"construction-robot"},
-    roboport = {"roboport"},
-    lamp = {"small-lamp"},
-    offshore_pump = {"offshore-pump"},
-    lightning_attractor = {"lightning-collector","lightning-rod"},
-    rocket_silo = {"rocket-silo"},
-    artillery_turret = {"artillery-turret"},
-    fluid_turret = {"flamethrower-turret"}
+    spider_vehicle = { "spidertron" },
+    artillery_wagon = { "artillery-wagon" },
+    fluid_wagon = { "fluid-wagon" },
+    cargo_wagon = { "cargo-wagon" },
+    locomotive = { "locomotive" },
+    rail_chain_signal = { "rail-chain-signal" },
+    rail_signal = { "rail-signal" },
+    train_stop = { "train-stop" },
+    rail_support = { "rail-support" },
+    rail_ramp = { "rail-ramp" },
+    logistic_robot = { "logistic-robot" },
+    construction_robot = { "construction-robot" },
+    roboport = { "roboport" },
+    lamp = { "small-lamp" },
+    offshore_pump = { "offshore-pump" },
+    lightning_attractor = { "lightning-collector", "lightning-rod" },
+    rocket_silo = { "rocket-silo" },
+    artillery_turret = { "artillery-turret" },
+    fluid_turret = { "flamethrower-turret" }
 }
 
 for key, itemArray in pairs(itemsToHide) do

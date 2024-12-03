@@ -10,6 +10,10 @@ data:extend({
             {
                 type = "unlock-recipe",
                 recipe = "ice-melting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "oxide-asteroid-crushing"
             }
         },
         unit =

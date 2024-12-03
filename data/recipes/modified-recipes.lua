@@ -62,7 +62,6 @@ data.raw.recipe["artillery-wagon"].hidden = true
 data.raw.recipe["car"].hidden = true
 data.raw.recipe["tank"].hidden = true
 data.raw.recipe["spidertron"].hidden = true
-data.raw.recipe["rail"].hidden = true
 data.raw.recipe["rail-ramp"].hidden = true
 data.raw.recipe["construction-robot"].hidden = true
 data.raw.recipe["logistic-robot"].hidden = true
