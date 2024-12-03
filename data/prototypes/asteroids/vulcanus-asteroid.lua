@@ -56,5 +56,4 @@ for i = 1, 8, 1 do
     vulcanus_huge.graphics_set.variations[i].color_texture.filename =
         "__platformer__/graphics/entity/vulcanus/huge/asteroid-vulcanus-huge-colour-0" .. i .. ".png"
 end
-
 data.extend({ vulcanus_huge })
