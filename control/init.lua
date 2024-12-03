@@ -23,7 +23,16 @@ script.on_event(defines.events.on_player_created, function(e)
 end)
 
 script.on_event(defines.events.on_surface_created, function(event)
-    shrink_the_world(game.surfaces[event.surface_index])
+    for _, planet in pairs(game.planets) do
+        local surface = planet.surface
+        if surface then
+            if surface.index == event.surface_index then
+                shrink_the_world(surface)
+            else
+            end
+        else
+        end
+    end
 end)
 
 function delete_all_chunks(surface)
