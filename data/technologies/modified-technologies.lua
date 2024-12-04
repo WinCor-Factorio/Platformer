@@ -257,3 +257,9 @@ data.raw.technology["steam-power"].unit =
     time = 60,
     count = 200
 }
+
+data.raw.technology["recycling"].research_trigger = {
+    type = "craft-item",
+    item = "scrap",
+    count = 100
+}

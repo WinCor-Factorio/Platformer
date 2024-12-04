@@ -10,9 +10,10 @@ vulcanus_chunk.ingredients =
 }
 vulcanus_chunk.results =
 {
-    { type = "item", name = "tungsten-ore", amount = 1,     probability = 0.1 },
-    { type = "item", name = "lava-stone",   amount_min = 1, amount_max = 2 },
-    { type = "item", name = "calcite",      amount_min = 1, amount_max = 10 },
+    { type = "item", name = "tungsten-ore", amount_min = 1, amount_max = 10 },
+    { type = "item", name = "lava-stone",   amount_min = 1, amount_max = 10 },
+    { type = "item", name = "calcite",      amount_min = 1, amount_max = 5 },
+    { type = "item", name = "stone",        amount = 1 },
 
 }
 data.extend({ vulcanus_chunk })
