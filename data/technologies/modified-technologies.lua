@@ -263,3 +263,17 @@ data.raw.technology["recycling"].research_trigger = {
     item = "scrap",
     count = 100
 }
+
+data.raw.technology["uranium-mining"].effects = {
+    {
+        type = "unlock-recipe",
+        recipe = "uranium_extraction"
+    }
+}
+data.raw.technology["uranium-mining"].localised_description = ""
+
+data.raw.technology["uranium-processing"].research_trigger = {
+    type = "craft-item",
+    item = "uranium-ore",
+    count = 1
+}
