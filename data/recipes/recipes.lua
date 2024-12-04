@@ -1,4 +1,5 @@
 require("__platformer__/data/recipes/modified-recipes.lua")
+require("__platformer__/data/recipes/disabled-recipes.lua")
 require("__platformer__/data/recipes/orbit-aquilo-recipes.lua")
 require("__platformer__/data/recipes/orbit-fulgora-recipes.lua")
 require("__platformer__/data/recipes/orbit-gleba-recipes.lua")
