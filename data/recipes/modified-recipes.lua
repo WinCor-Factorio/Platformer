@@ -46,7 +46,6 @@ data.raw.recipe["scrap-recycling"].results = {
 -- Hidden recipes
 data.raw.recipe["iron-chest"].hidden = true;
 data.raw.recipe["wooden-chest"].hidden = true;
-data.raw.recipe["landfill"].hidden = true;
 data.raw.recipe["small-electric-pole"].hidden = true
 data.raw.recipe["medium-electric-pole"].hidden = true
 data.raw.recipe["big-electric-pole"].hidden = true

@@ -12,6 +12,7 @@ crude_chunk.results =
 {
     { type = "item", name = "crude-oil-sludge", amount_min = 1, amount_max = 3 },
     { type = "item", name = "coal",             amount_min = 1, amount_max = 3 },
+    { type = "item", name = "stone",            amount = 1 },
 }
 data.extend({ crude_chunk })
 

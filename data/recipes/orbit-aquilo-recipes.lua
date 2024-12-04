@@ -12,5 +12,6 @@ aquilo_chunk.results =
 {
     { type = "item", name = "cryolitic-ore", amount_min = 1, amount_max = 5 },
     { type = "item", name = "lithium-ore",   amount_min = 1, amount_max = 5 },
+    { type = "item", name = "stone",         amount = 1 },
 }
 data.extend({ aquilo_chunk })

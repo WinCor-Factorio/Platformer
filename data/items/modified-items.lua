@@ -3,7 +3,6 @@ itemsToHide = {
         "carbonic-asteroid-chunk",
         "wooden-chest",
         "iron-chest",
-        "landfill",
         "small-electric-pole",
         "medium-electric-pole",
         "big-electric-pole",

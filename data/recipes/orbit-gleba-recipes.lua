@@ -13,5 +13,7 @@ gleba_chunk.results =
     { type = "item", name = "yumako",       amount_min = 1, amount_max = 5 },
     { type = "item", name = "jellynut",     amount_min = 1, amount_max = 5 },
     { type = "item", name = "pentapod-egg", amount = 1,     probability = 0.05 },
+    { type = "item", name = "stone",        amount = 1 },
+
 }
 data.extend({ gleba_chunk })
