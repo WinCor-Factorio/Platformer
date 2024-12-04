@@ -72,7 +72,7 @@ end
 function set_starting_items()
     local hub = storage.platform.hub
     if hub then
-        hub.insert({ name = "crusher", count = 2 })
+        hub.insert({ name = "crusher", count = 1 })
         hub.insert({ name = "asteroid-collector", count = 2 })
         hub.insert({ name = "assembling-machine-1", count = 10 })
         hub.insert({ name = "inserter", count = 50 })
