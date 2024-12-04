@@ -33,3 +33,20 @@ oil_sludge_processing.results =
     { type = "fluid", name = "crude-oil", amount = 10 },
 }
 data.extend({ oil_sludge_processing })
+
+
+local uranium_extraction = table.deepcopy(data.raw.recipe["ice-melting"])
+uranium_extraction.name = "uranium_extraction"
+uranium_extraction.localised_name = {"recipe-name.uranium_extraction"}
+uranium_extraction.icon = "__base__/graphics/icons/uranium-ore.png"
+uranium_extraction.enabled = false
+uranium_extraction.ingredients =
+{
+    { type = "item", name = "metallic-asteroid-chunk", amount = 1 },
+    { type = "fluid", name = "sulfuric-acid", amount = 10 }
+}
+uranium_extraction.results =
+{
+    { type = "item", name = "uranium-ore", amount = 1 },
+}
+data.extend({ uranium_extraction })
