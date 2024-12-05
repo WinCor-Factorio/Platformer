@@ -1,6 +1,7 @@
 data.raw.recipe["recycler"].surface_conditions = {}
 data.raw.recipe["foundry"].surface_conditions = {}
 data.raw.recipe["cryogenic-plant"].surface_conditions = {}
+data.raw.recipe["electromagnetic-plant"].surface_conditions = {}
 data.raw.recipe["biochamber"].surface_conditions = {}
 data.raw.recipe["foundry"].surface_conditions = {}
 data.raw.recipe["fusion-generator"].surface_conditions = {}
@@ -56,7 +57,7 @@ data.raw.recipe["captive-biter-spawner"].ingredients = {
     { type = "fluid", name = "fluoroketone-cold",    amount = 100 }
 }
 
-data.raw.recipe["cryogenic-plant"].surface_conditions = {}
+data.raw.recipe["thruster-oxidizer"].ingredients = {
     { type = "item",  name = "iron-plate", amount = 2 },
     { type = "fluid", name = "water",      amount = 10 },
 }
