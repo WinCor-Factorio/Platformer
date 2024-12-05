@@ -6,6 +6,10 @@ data.raw.technology["automation-science-pack"].research_trigger =
     count = 100
 }
 
+data.raw.technology["solar-energy"].unit.time = 10
+data.raw.technology["solar-energy"].unit.count = 30
+
+
 data.raw.technology["automation-science-pack"].prerequisites = { "electronics" }
 
 --space-science-pack
