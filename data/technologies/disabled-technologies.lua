@@ -8,7 +8,6 @@ data.raw.technology["asteroid-reprocessing"].effects = {}
 
 -- Disabled technologies
 data.raw.technology["heavy-armor"].enabled = false;
-data.raw.technology["steel-axe"].enabled = false;
 data.raw.technology["battery-equipment"].enabled = false;
 data.raw.technology["belt-immunity-equipment"].enabled = false;
 data.raw.technology["night-vision-equipment"].enabled = false;
