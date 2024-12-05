@@ -1,11 +1,3 @@
---Disabled effects
-data.raw.technology["advanced-material-processing"].effects = {};
-data.raw.technology["uranium-mining"].effects = {};
-data.raw.technology["logistic-robotics"].effects = {};
-data.raw.technology["rocket-silo"].effects = {};
-data.raw.technology["advanced-material-processing-2"].effects = {};
-data.raw.technology["asteroid-reprocessing"].effects = {}
-
 -- Disabled technologies
 data.raw.technology["heavy-armor"].enabled = false;
 data.raw.technology["steel-axe"].enabled = false;
@@ -16,7 +8,6 @@ data.raw.technology["modular-armor"].enabled = false;
 data.raw.technology["solar-panel-equipment"].enabled = false;
 data.raw.technology["toolbelt"].enabled = false;
 data.raw.technology["electric-energy-distribution-2"].enabled = false;
--- data.raw.technology["automated-rail-transportation"].enabled = false;
 data.raw.technology["fluid-wagon"].enabled = false;
 data.raw.technology["mining-productivity-1"].enabled = false;
 data.raw.technology["mining-productivity-2"].enabled = false;

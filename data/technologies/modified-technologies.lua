@@ -132,6 +132,10 @@ data.raw.technology["planet-discovery-vulcanus"].effects = {
     {
         type = "unlock-recipe",
         recipe = "lava_stone_processing"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "lava_stone_to_coal"
     }
 }
 data.raw.technology["planet-discovery-aquilo"].effects = {
