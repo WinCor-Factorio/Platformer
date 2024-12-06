@@ -1,3 +1,46 @@
+--Simple function to scan the provided technology and removed the desired effect.
+local function remove_technology_effect(technology_name, effect_name)
+    local technology = data.raw.technology[technology_name]
+    for i, effect in pairs(technology.effects) do
+        if effect.type == effect_name then
+            table.remove(technology.effects, i)
+        end
+    end
+end
+
+--Simple function to scan the provided technology and removed the desired recipe unlock.
+local function remove_technology_effect_recipe(technology_name, effect_name)
+    local technology = data.raw.technology[technology_name]
+    for i, effect in pairs(technology.effects) do
+        if effect.type == "unlock-recipe" and effect.recipe == effect_name then
+            table.remove(technology.effects, i)
+        end
+    end
+end
+
+--Remove Technology Effects
+remove_technology_effect_recipe("advanced-material-processing", "steel-furnace");
+
+remove_technology_effect_recipe("logistic-robotics", "roboport");
+remove_technology_effect_recipe("logistic-robotics", "passive-provider-chest");
+remove_technology_effect_recipe("logistic-robotics", "storage-chest");
+remove_technology_effect_recipe("logistic-robotics", "logistic-robot");
+remove_technology_effect("logistic-robotics", "character-logistic-requests");
+remove_technology_effect("logistic-robotics", "character-logistic-trash-slots");
+
+remove_technology_effect("uranium-mining", "mining-with-fluid");
+
+remove_technology_effect_recipe("rocket-silo", "rocket-silo");
+remove_technology_effect_recipe("rocket-silo", "rocket-part");
+remove_technology_effect_recipe("rocket-silo", "cargo-landing-pad");
+remove_technology_effect_recipe("rocket-silo", "space-platform-starter-pack");
+remove_technology_effect_recipe("rocket-silo", "space-platform-foundation");
+remove_technology_effect("rocket-silo", "unlock-space-platforms");
+
+remove_technology_effect_recipe("asteroid-reprocessing", "metallic-asteroid-reprocessing");
+remove_technology_effect_recipe("asteroid-reprocessing", "oxide-asteroid-reprocessing");
+remove_technology_effect_recipe("asteroid-reprocessing", "carbonic-asteroid-reprocessing");
+
 --automation-science-pack
 data.raw.technology["automation-science-pack"].research_trigger =
 {
