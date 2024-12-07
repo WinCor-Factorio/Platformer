@@ -35,6 +35,21 @@ script.on_event(defines.events.on_surface_created, function(event)
     end
 end)
 
+--Regenerate the tech tree any time anything could have changed the tech tree.
+script.on_configuration_changed(function()
+    game.print("Platformer checking technology tree for Correctness...")
+    for _, force in pairs(game.forces) do
+        for _, technology in pairs(force.technologies) do
+            technology.reload()
+            technology.enabled = technology.prototype.enabled --This seems gross but it is absolutely required as nothing else works.
+        end
+
+        force.reset_recipes()
+        force.reset_technologies()
+        force.reset_technology_effects()
+    end
+end)
+
 function delete_all_chunks(surface)
     for chunk in surface.get_chunks() do
         surface.delete_chunk({ chunk.x, chunk.y })
