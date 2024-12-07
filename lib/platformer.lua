@@ -37,7 +37,6 @@ end
 --Simple function to scan the provided technology and removed the desired recipe unlock.
 platformer.technology.remove_recipe = function(technology_name, recipe_name)
     local technology = data.raw.technology[technology_name]
-    log("platformer.technology.remove_recipe(" .. technology_name .. "," .. recipe_name .. ")")
     if technology.effects ~= nil then
         for i, effect in pairs(technology.effects) do
             if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
@@ -56,15 +55,9 @@ end
 
 -- Checks if the technology has no effects before calling remove_research.
 platformer.technology.prune_research = function(technology_name)
-    log("platformer.technology.prune_research(" .. technology_name .. ")")
     local technology = data.raw.technology[technology_name]
     if platformer.helpers.tablelength(technology.effects) == 0 then
-        log("platformer.technology.prune_research(" .. technology_name .. ") = true")
         platformer.technology.remove_research(technology_name)
-    else
-        log("platformer.technology.prune_research(" ..
-            technology_name .. ") = false (" .. platformer.helpers.tablelength(technology.effects) .. ")")
-        log(serpent.dump(technology.effects))
     end
 end
 
@@ -93,7 +86,6 @@ platformer.technology.find_dependents = function(technology_name)
         if technology.prerequisites ~= nil then
             for _, prerequisite in pairs(technology.prerequisites) do
                 if prerequisite == technology_name then
-                    log(prerequisite)
                     table.insert(prerequisites, dep_tech_name)
                 end
             end
