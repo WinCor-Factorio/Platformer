@@ -22,7 +22,6 @@ itemsToHide = {
         "artificial-yumako-soil",
         "refined-hazard-concrete",
         "hazard-concrete",
-        "small-lamp",
         "active-provider-chest",
         "passive-provider-chest",
         "storage-chest",

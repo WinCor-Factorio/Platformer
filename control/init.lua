@@ -35,6 +35,13 @@ script.on_event(defines.events.on_surface_created, function(event)
     end
 end)
 
+--Regenerate the tech tree any time anything could have changed the tech tree.
+script.on_configuration_changed(function()
+    for _, force in pairs(game.forces) do
+        force.reset_technologies()
+    end
+end)
+
 function delete_all_chunks(surface)
     for chunk in surface.get_chunks() do
         surface.delete_chunk({ chunk.x, chunk.y })
