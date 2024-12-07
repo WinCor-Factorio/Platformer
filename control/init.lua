@@ -37,8 +37,16 @@ end)
 
 --Regenerate the tech tree any time anything could have changed the tech tree.
 script.on_configuration_changed(function()
+    game.print("Platformer checking technology tree for Correctness...")
     for _, force in pairs(game.forces) do
+        for _, technology in pairs(force.technologies) do
+            technology.reload()
+            technology.enabled = technology.prototype.enabled --This seems gross but it is absolutely required as nothing else works.
+        end
+
+        force.reset_recipes()
         force.reset_technologies()
+        force.reset_technology_effects()
     end
 end)
 
