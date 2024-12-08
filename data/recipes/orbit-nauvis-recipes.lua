@@ -19,8 +19,8 @@ data.extend({ crude_chunk })
 
 -- crude-oil-sludge to crude oil
 local oil_sludge_processing = table.deepcopy(data.raw.recipe["thruster-oxidizer"])
-oil_sludge_processing.name = "oil_sludge_processing"
-oil_sludge_processing.localised_name = { "recipe-name.oil_sludge_processing" }
+oil_sludge_processing.name = "oil-sludge-processing"
+oil_sludge_processing.localised_name = { "recipe-name.oil-sludge-processing" }
 oil_sludge_processing.icon = "__base__/graphics/icons/fluid/crude-oil.png"
 oil_sludge_processing.enabled = false
 oil_sludge_processing.subgroup = "fluid-recipes"
@@ -36,8 +36,8 @@ data.extend({ oil_sludge_processing })
 
 
 local uranium_extraction = table.deepcopy(data.raw.recipe["ice-melting"])
-uranium_extraction.name = "uranium_extraction"
-uranium_extraction.localised_name = { "recipe-name.uranium_extraction" }
+uranium_extraction.name = "uranium-extraction"
+uranium_extraction.localised_name = { "recipe-name.uranium-extraction" }
 uranium_extraction.icon = "__base__/graphics/icons/uranium-ore.png"
 uranium_extraction.enabled = false
 uranium_extraction.ingredients =

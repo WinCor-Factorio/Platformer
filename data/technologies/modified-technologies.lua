@@ -79,7 +79,7 @@ data.raw.technology["oil-processing"].research_trigger = {
     item = "crude-oil-sludge",
     count = 1
 }
-table.insert(data.raw.technology["oil-processing"].effects, { type = "unlock-recipe", recipe = "oil_sludge_processing" })
+table.insert(data.raw.technology["oil-processing"].effects, { type = "unlock-recipe", recipe = "oil-sludge-processing" })
 
 data.raw.technology["oil-gathering"].effects = { {
     type = "unlock-recipe",
@@ -131,11 +131,11 @@ data.raw.technology["planet-discovery-vulcanus"].effects = {
     },
     {
         type = "unlock-recipe",
-        recipe = "lava_stone_processing"
+        recipe = "lava-stone-processing"
     },
     {
         type = "unlock-recipe",
-        recipe = "lava_stone_to_coal"
+        recipe = "lava-stone-to-coal"
     }
 }
 data.raw.technology["planet-discovery-aquilo"].effects = {
@@ -208,7 +208,7 @@ data.raw.technology["lithium-processing"].research_trigger = {
 data.raw.technology["lithium-processing"].effects = {
     {
         type = "unlock-recipe",
-        recipe = "lithium_salt_processing"
+        recipe = "lithium-salt-processing"
     }
 }
 
@@ -281,7 +281,7 @@ data.raw.technology["recycling"].research_trigger = {
 data.raw.technology["uranium-mining"].effects = {
     {
         type = "unlock-recipe",
-        recipe = "uranium_extraction"
+        recipe = "uranium-extraction"
     }
 }
 data.raw.technology["uranium-mining"].localised_description = ""

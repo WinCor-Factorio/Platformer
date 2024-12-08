@@ -18,8 +18,8 @@ data.extend({ aquilo_chunk })
 
 -- Lava-stone to lava
 local lithium_salt_processing = table.deepcopy(data.raw.recipe["thruster-oxidizer"])
-lithium_salt_processing.name = "lithium_salt_processing"
-lithium_salt_processing.localised_name = { "recipe-name.lithium_salt_processing" }
+lithium_salt_processing.name = "lithium-salt-processing"
+lithium_salt_processing.localised_name = { "recipe-name.lithium-salt-processing" }
 lithium_salt_processing.icon = "__space-age__/graphics/icons/fluid/lithium-brine.png"
 lithium_salt_processing.enabled = false
 lithium_salt_processing.subgroup = "fluid-recipes"

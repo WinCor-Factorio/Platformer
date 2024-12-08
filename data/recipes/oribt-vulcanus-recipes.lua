@@ -20,8 +20,8 @@ data.extend({ vulcanus_chunk })
 
 -- Lava-stone to lava
 local lava_stone_processing = table.deepcopy(data.raw.recipe["thruster-oxidizer"])
-lava_stone_processing.name = "lava_stone_processing"
-lava_stone_processing.localised_name = { "recipe-name.lava_stone_processing" }
+lava_stone_processing.name = "lava-stone-processing"
+lava_stone_processing.localised_name = { "recipe-name.lava-stone-processing" }
 lava_stone_processing.icon = "__space-age__/graphics/icons/fluid/lava.png"
 lava_stone_processing.enabled = false
 lava_stone_processing.subgroup = "fluid-recipes"
@@ -37,8 +37,8 @@ lava_stone_processing.results =
 data.extend({ lava_stone_processing })
 
 local lava_stone_to_carbon = table.deepcopy(data.raw.recipe["copper-cable"])
-lava_stone_to_carbon.name = "lava_stone_to_coal"
-lava_stone_to_carbon.localised_name = { "recipe-name.lava_stone_to_carbon" }
+lava_stone_to_carbon.name = "lava-stone-to-coal"
+lava_stone_to_carbon.localised_name = { "recipe-name.lava-stone-to-carbon" }
 lava_stone_to_carbon.icon = "__space-age__/graphics/icons/carbon.png"
 lava_stone_to_carbon.enabled = false
 lava_stone_to_carbon.order = "m"
