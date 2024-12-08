@@ -147,6 +147,10 @@ data.raw.technology["planet-discovery-aquilo"].effects = {
     {
         type = "unlock-recipe",
         recipe = "aquilo-asteroid-crushing"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "crolitic-ore-processing"
     }
 }
 data.raw.technology["agriculture"].research_trigger = nil
