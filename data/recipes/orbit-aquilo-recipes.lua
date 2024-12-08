@@ -11,7 +11,25 @@ aquilo_chunk.ingredients =
 aquilo_chunk.results =
 {
     { type = "item", name = "cryolitic-ore", amount_min = 1, amount_max = 5 },
-    { type = "item", name = "lithium-ore",   amount_min = 1, amount_max = 5 },
+    { type = "item", name = "lithium-salt",   amount_min = 1, amount_max = 5 },
     { type = "item", name = "stone",         amount = 1 },
 }
 data.extend({ aquilo_chunk })
+
+-- Lava-stone to lava
+local lithium_salt_processing = table.deepcopy(data.raw.recipe["thruster-oxidizer"])
+lithium_salt_processing.name = "lithium_salt_processing"
+lithium_salt_processing.localised_name = { "recipe-name.lithium_salt_processing" }
+lithium_salt_processing.icon = "__space-age__/graphics/icons/fluid/lithium-brine.png"
+lithium_salt_processing.enabled = false
+lithium_salt_processing.subgroup = "fluid-recipes"
+lithium_salt_processing.ingredients =
+{
+    { type = "item", name = "lithium-salt", amount = 1 },
+    { type = "fluid", name = "water", amount = 10 },
+}
+lithium_salt_processing.results =
+{
+    { type = "fluid", name = "lithium-brine",          amount = 15 }
+}
+data.extend({ lithium_salt_processing })

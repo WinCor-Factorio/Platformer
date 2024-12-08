@@ -106,10 +106,10 @@ data:extend(
         },
         {
             type = "item",
-            name = "lithium-ore",
-            icon = "__platformer__/graphics/icons/lithium-ore.png",
+            name = "lithium-salt",
+            icon = "__platformer__/graphics/icons/lithium-salt.png",
             subgroup = "raw-resource",
-            order = "b[lithium-ore]",
+            order = "b[lithium-salt]",
             inventory_move_sound = space_age_item_sounds.rock_inventory_move,
             pick_sound = space_age_item_sounds.rock_inventory_pickup,
             drop_sound = space_age_item_sounds.rock_inventory_move,

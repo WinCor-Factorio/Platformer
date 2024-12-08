@@ -202,8 +202,14 @@ data.raw.technology["tungsten-steel"].research_trigger = {
 }
 data.raw.technology["lithium-processing"].research_trigger = {
     type = "craft-item",
-    item = "lithium-ore",
+    item = "lithium-salt",
     count = 300
+}
+data.raw.technology["lithium-processing"].effects = {
+    {
+        type = "unlock-recipe",
+        recipe = "lithium_salt_processing"
+    }
 }
 
 data.raw.technology["space-platform-thruster"].effects = {
