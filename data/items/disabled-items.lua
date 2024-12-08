@@ -48,7 +48,6 @@ itemsToHide = {
         "personal-roboport-equipment",
         "exoskeleton-equipment",
         "belt-immunity-equipment",
-        "radar",
         "flamethrower-turret",
         "artillery-turret"
     },

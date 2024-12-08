@@ -84,7 +84,6 @@ data.raw.recipe["pistol"].hidden = true
 data.raw.recipe["shotgun-shell"].hidden = true
 data.raw.recipe["piercing-shotgun-shell"].hidden = true
 data.raw.recipe["artillery-shell"].hidden = true
-data.raw.recipe["radar"].hidden = true
 data.raw.recipe["flamethrower-turret"].hidden = true
 data.raw.recipe["artillery-turret"].hidden = true
 data.raw.recipe["flamethrower-ammo"].hidden = true
