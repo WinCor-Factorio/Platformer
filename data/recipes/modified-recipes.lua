@@ -1,11 +1,6 @@
-data.raw.recipe["recycler"].surface_conditions = {}
-data.raw.recipe["foundry"].surface_conditions = {}
-data.raw.recipe["cryogenic-plant"].surface_conditions = {}
-data.raw.recipe["electromagnetic-plant"].surface_conditions = {}
-data.raw.recipe["biochamber"].surface_conditions = {}
-data.raw.recipe["foundry"].surface_conditions = {}
-data.raw.recipe["fusion-generator"].surface_conditions = {}
-data.raw.recipe["fusion-reactor"].surface_conditions = {}
+for key, itemArray in pairs(data.raw.recipe) do
+    data.raw.recipe[key].surface_conditions = {}
+end
 
 data.raw.recipe["space-platform-foundation"].ingredients = {
     { type = "item", name = "iron-plate",   amount = 10 },
