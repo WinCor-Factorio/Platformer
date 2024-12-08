@@ -6,11 +6,30 @@ data.raw.recipe["space-platform-foundation"].ingredients = {
     { type = "item", name = "iron-plate",   amount = 10 },
     { type = "item", name = "copper-cable", amount = 5 }
 }
+data.raw.recipe["space-platform-foundation-recycling"].results = {
+    {
+        type = "item", name = "iron-plate", amount = 2, extra_count_fraction = 0.5
+    },
+    {
+        type = "item", name = "copper-cable", amount = 1, extra_count_fraction = 0.25
+    }
+}
 
 data.raw.recipe["electric-furnace"].ingredients = {
     { type = "item", name = "iron-plate",         amount = 60 },
     { type = "item", name = "electronic-circuit", amount = 5 },
     { type = "item", name = "stone-brick",        amount = 10 }
+}
+data.raw.recipe["electric-furnace-recycling"].results = {
+    {
+        type = "item", name = "iron-plate", amount = 15
+    },
+    {
+        type = "item", name = "electronic-circuit", amount = 1, extra_count_fraction = 0.25
+    },
+    {
+        type = "item", name = "stone-brick", amount = 2, extra_count_fraction = 0.5
+    }
 }
 
 data.raw.recipe["advanced-metallic-asteroid-crushing"].results = {
@@ -24,11 +43,34 @@ data.raw.recipe["crusher"].ingredients = {
     { type = "item", name = "engine-unit",     amount = 10 },
     { type = "item", name = "iron-gear-wheel", amount = 20 }
 }
+data.raw.recipe["crusher-recycling"].results = {
+    {
+        type = "item", name = "steel-plate", amount = 2, extra_count_fraction = 0.5
+    },
+    {
+        type = "item", name = "engine-unit", amount = 2, extra_count_fraction = 0.5
+    },
+    {
+        type = "item", name = "iron-gear-wheel", amount = 5
+    }
+}
 
 data.raw.recipe["asteroid-collector"].ingredients = {
     { type = "item", name = "electronic-circuit",   amount = 20 },
     { type = "item", name = "engine-unit",          amount = 8 },
     { type = "item", name = "long-handed-inserter", amount = 2 }
+}
+data.raw.recipe["asteroid-collector-recycling"].results = {
+    
+    {
+        type = "item", name = "electronic-circuit", amount = 5
+    },
+    {
+        type = "item", name = "engine-unit", amount = 2
+    },
+    {
+        type = "item", name = "long-handed-inserter", amount = 0, extra_count_fraction = 0.5
+    }
 }
 
 data.raw.recipe["scrap-recycling"].results = {
