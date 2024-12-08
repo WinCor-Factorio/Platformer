@@ -88,3 +88,4 @@ data.raw.recipe["radar"].hidden = true
 data.raw.recipe["flamethrower-turret"].hidden = true
 data.raw.recipe["artillery-turret"].hidden = true
 data.raw.recipe["flamethrower-ammo"].hidden = true
+data.raw.recipe["cargo-landing-pad"].hidden = true
