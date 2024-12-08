@@ -21,7 +21,6 @@ data.raw.recipe["artificial-yumako-soil"].hidden = true
 data.raw.recipe["refined-hazard-concrete"].hidden = true
 data.raw.recipe["hazard-concrete"].hidden = true
 data.raw.recipe["cliff-explosives"].hidden = true
-data.raw.recipe["small-lamp"].hidden = true
 data.raw.recipe["active-provider-chest"].hidden = true
 data.raw.recipe["passive-provider-chest"].hidden = true
 data.raw.recipe["storage-chest"].hidden = true
