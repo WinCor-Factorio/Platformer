@@ -61,7 +61,7 @@ data.raw.recipe["asteroid-collector"].ingredients = {
     { type = "item", name = "long-handed-inserter", amount = 2 }
 }
 data.raw.recipe["asteroid-collector-recycling"].results = {
-    
+
     {
         type = "item", name = "electronic-circuit", amount = 5
     },
