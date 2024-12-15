@@ -52,3 +52,19 @@ lava_stone_to_carbon.results =
     { type = "item", name = "carbon", amount = 4 },
 }
 data.extend({ lava_stone_to_carbon })
+
+
+
+-- Vulcanus Asteroid Chunk Recycle
+local vulcanus_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metallic-asteroid-chunk-recycling"])
+vulcanus_asteroid_chunk_recycling.enabled = true
+vulcanus_asteroid_chunk_recycling.name = "vulcanus-asteroid-chunk-recycling"
+vulcanus_asteroid_chunk_recycling.localised_name = { "recipe-name.vulcanus-asteroid-chunk-recycling" }
+vulcanus_asteroid_chunk_recycling.ingredients = {
+    {type = "item", name = "vulcanus-asteroid-chunk", amount = 1}
+}
+vulcanus_asteroid_chunk_recycling.results = {
+    {type = "item", name = "vulcanus-asteroid-chunk", amount = 0, extra_count_fraction = 0.25}
+}
+
+data.extend({ vulcanus_asteroid_chunk_recycling })

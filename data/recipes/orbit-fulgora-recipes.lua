@@ -14,3 +14,19 @@ fulgora_chunk.results =
     { type = "item", name = "stone", amount = 1 },
 }
 data.extend({ fulgora_chunk })
+
+
+
+-- Fulgora Asteroid Chunk Recycle
+local fulgora_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metallic-asteroid-chunk-recycling"])
+fulgora_asteroid_chunk_recycling.enabled = true
+fulgora_asteroid_chunk_recycling.name = "fulgora-asteroid-chunk-recycling"
+fulgora_asteroid_chunk_recycling.localised_name = { "recipe-name.fulgora-asteroid-chunk-recycling" }
+fulgora_asteroid_chunk_recycling.ingredients = {
+    {type = "item", name = "fulgora-asteroid-chunk", amount = 1}
+}
+fulgora_asteroid_chunk_recycling.results = {
+    {type = "item", name = "fulgora-asteroid-chunk", amount = 0, extra_count_fraction = 0.25}
+}
+
+data.extend({ fulgora_asteroid_chunk_recycling })

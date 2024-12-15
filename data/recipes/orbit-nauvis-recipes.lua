@@ -50,3 +50,20 @@ uranium_extraction.results =
     { type = "item", name = "uranium-ore", amount = 1 },
 }
 data.extend({ uranium_extraction })
+
+
+
+
+-- Crudeic Asteroid Chunk Recycle
+local crudeic_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metallic-asteroid-chunk-recycling"])
+crudeic_asteroid_chunk_recycling.enabled = true
+crudeic_asteroid_chunk_recycling.name = "crudeic-asteroid-chunk-recycling"
+crudeic_asteroid_chunk_recycling.localised_name = { "recipe-name.crudeic-asteroid-chunk-recycling" }
+crudeic_asteroid_chunk_recycling.ingredients = {
+    {type = "item", name = "crudeic-asteroid-chunk", amount = 1}
+}
+crudeic_asteroid_chunk_recycling.results = {
+    {type = "item", name = "crudeic-asteroid-chunk", amount = 0, extra_count_fraction = 0.25}
+}
+
+data.extend({ crudeic_asteroid_chunk_recycling })

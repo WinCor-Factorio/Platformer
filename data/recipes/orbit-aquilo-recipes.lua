@@ -51,3 +51,18 @@ crolitic_ore_processing.results =
     { type = "fluid", name = "ammoniacal-solution", amount = 10 },
 }
 data.extend({ crolitic_ore_processing })
+
+
+-- Aquilo Asteroid Chunk Recycle
+local aquilo_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metallic-asteroid-chunk-recycling"])
+aquilo_asteroid_chunk_recycling.enabled = true
+aquilo_asteroid_chunk_recycling.name = "aquilo-asteroid-chunk-recycling"
+aquilo_asteroid_chunk_recycling.localised_name = { "recipe-name.aquilo-asteroid-chunk-recycling" }
+aquilo_asteroid_chunk_recycling.ingredients = {
+    {type = "item", name = "aquilo-asteroid-chunk", amount = 1}
+}
+aquilo_asteroid_chunk_recycling.results = {
+    {type = "item", name = "aquilo-asteroid-chunk", amount = 0, extra_count_fraction = 0.25}
+}
+
+data.extend({ aquilo_asteroid_chunk_recycling })
