@@ -18,7 +18,6 @@ lib.technology.remove_recipe = function(technology_name, recipe_name)
     if technology.effects ~= nil then
         for i, effect in pairs(technology.effects) do
             if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
-                log("Removed recipe (" .. recipe_name .. ") from \"" .. technology_name .. "\"")
                 table.remove(technology.effects, i)
             end
         end
@@ -27,7 +26,6 @@ end
 
 -- Calls remove_recipe for all technologies
 lib.technology.remove_everywhere = function(recipe_name)
-    log("Removing recipe (" .. recipe_name .. ") from all technologies.")
     for technology_name, _ in pairs(data.raw.technology) do
         lib.technology.remove_recipe(technology_name, recipe_name)
     end
@@ -52,8 +50,6 @@ end
 lib.technology.remove = function(technology_name)
     local technology = data.raw.technology[technology_name]
     local dependents = lib.technology.find_dependents(technology_name)
-
-    log("Removing technology (" .. technology_name .. ") from the technology tree.")
 
     for _, dependent in pairs(dependents) do
         lib.technology.remove_prerequisite(dependent, technology_name)
@@ -104,7 +100,6 @@ end
 lib.technology.add_prerequisite = function(technology_name, prerequisite_name)
     local technology = data.raw.technology[technology_name]
     if not lib.technology.has_prerequisite(technology_name, prerequisite_name) then
-        log("Add " .. prerequisite_name .. " To " .. technology_name)
         table.insert(technology.prerequisites, prerequisite_name)
         log(technology.prerequisites)
     end
