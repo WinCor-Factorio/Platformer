@@ -65,7 +65,6 @@ local hidden_recipes = {
     "distractor-capsule",
     "destroyer-capsule",
     "flamethrower",
-    "rocket-launcher",
     "combat-shotgun",
     "shotgun",
     "teslagun",
