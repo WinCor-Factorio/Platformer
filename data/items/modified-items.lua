@@ -1,7 +1,6 @@
 for _, type_data in pairs(data.raw) do
     for _, item in pairs(type_data) do
         if item.surface_conditions ~= nil or item.surface_conditions then
-            log(item.item.name)
             item.surface_conditions = nil
         end
     end

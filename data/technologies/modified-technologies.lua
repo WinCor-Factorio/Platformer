@@ -1,16 +1,16 @@
 --Remove Technology Effects
 lib.technology.remove_recipe("advanced-material-processing", "steel-furnace");
 
-lib.technology.remove_effect("logistic-robotics", "character-logistic-requests");
-lib.technology.remove_effect("logistic-robotics", "character-logistic-trash-slots");
+lib.technology.remove_effects_by_type("logistic-robotics", "character-logistic-requests");
+lib.technology.remove_effects_by_type("logistic-robotics", "character-logistic-trash-slots");
 lib.technology.remove_recipe("logistic-robotics", "roboport");
 lib.technology.remove_recipe("logistic-robotics", "passive-provider-chest");
 lib.technology.remove_recipe("logistic-robotics", "storage-chest");
 lib.technology.remove_recipe("logistic-robotics", "logistic-robot");
 
-lib.technology.remove_effect("uranium-mining", "mining-with-fluid");
+lib.technology.remove_effects_by_type("uranium-mining", "mining-with-fluid");
 
-lib.technology.remove_effect("rocket-silo", "unlock-space-platforms");
+lib.technology.remove_effects_by_type("rocket-silo", "unlock-space-platforms");
 lib.technology.remove_recipe("rocket-silo", "rocket-silo");
 lib.technology.remove_recipe("rocket-silo", "rocket-part");
 lib.technology.remove_recipe("rocket-silo", "cargo-landing-pad");
@@ -22,7 +22,7 @@ lib.technology.remove_recipe("asteroid-reprocessing", "oxide-asteroid-reprocessi
 lib.technology.remove_recipe("asteroid-reprocessing", "carbonic-asteroid-reprocessing");
 
 --Remove some of these things that are unlocked elsewhere so we can possibly prune these technologies later.
-lib.technology.remove_recipe("asteroid-reprocessing", "iron-stick"); --Unlocked with concrete research
+lib.technology.remove_recipe("asteroid-reprocessing", "iron-stick");                --Unlocked with concrete research
 lib.technology.remove_recipe("advanced-material-processing-2", "electric-furnace"); --Unlocked at game start.
 
 --automation-science-pack
@@ -322,3 +322,20 @@ data.raw.technology["uranium-processing"].research_trigger = {
     item = "uranium-ore",
     count = 1
 }
+
+-- asteroid-productivity
+lib.technology.remove_recipe_productivity_effect("asteroid-productivity", "Removecarbonic-asteroid-crushing");
+lib.technology.remove_recipe_productivity_effect("asteroid-productivity", "metallic-asteroid-crushing");
+lib.technology.remove_recipe_productivity_effect("asteroid-productivity", "advanced-carbonic-asteroid-crushing");
+lib.technology.remove_recipe_productivity_effect("asteroid-productivity", "advanced-oxide-asteroid-crushing");
+local asteroid_productivity_tech = data.raw.technology["asteroid-productivity"]
+table.insert(asteroid_productivity_tech.effects,
+    { type = "change-recipe-productivity", recipe = "crudeic-asteroid-crushing", change = 0.1 })
+table.insert(asteroid_productivity_tech.effects,
+    { type = "change-recipe-productivity", recipe = "aquilo-asteroid-crushing", change = 0.1 })
+table.insert(asteroid_productivity_tech.effects,
+    { type = "change-recipe-productivity", recipe = "fulgora-asteroid-crushing", change = 0.1 })
+table.insert(asteroid_productivity_tech.effects,
+    { type = "change-recipe-productivity", recipe = "gleba-asteroid-crushing", change = 0.1 })
+table.insert(asteroid_productivity_tech.effects,
+    { type = "change-recipe-productivity", recipe = "vulcanus-asteroid-crushing", change = 0.1 })
