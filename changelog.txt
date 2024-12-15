@@ -1,0 +1,117 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 15. 12. 2024
+  Bugfixes:
+    - Added missing lithium recipe
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 15. 12. 2024
+  Bugfixes:
+    - Fixed wrong crafting time on the new Metallic Asteroid crushing recipes.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 15. 12. 2024
+  Balancing:
+    - Made the start harder (fewer items)
+  Bugfixes:
+    - Changed the way we disable technologies. (There were problems with other mods) Thanks to @credomane
+    - Fixed scrap recipe to output carbon.
+    - Fixed ammonical solution separation recipe.
+    - Fixed such that asteroids breaks into the correct chunks.
+    - Removed surface conditions for all items.
+  Changes:
+    - Changed icon of the aquilo chunk.
+    - Changed crushing of metallic asteroid to have different crushing methods. (Unlock through different stage of the game)
+    - Added a description about how quality works on hub chests.
+    - Updated asteroid productivity technology to work on new asteroids.
+    - Created spawn definition for Solar System Edge and Shattered Planet.
+    - Added recycling recipe for the new asteroids.
+    - Updated the description for biter spawner.
+    - Enabled rocket launcher.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 08. 12. 2024
+  Bugfixes:
+    - Removed surface conditions from all recipes
+  Changes:
+    - Added spawn definition for Aquilo
+    - Added recipe for Flourine & Ammoniacal Solution
+    - Added recipe for Lithium Brine
+    - Corrected recycling recipes
+    - Adjusted speed of asteroids between planets
+    - Readded Trains, and adjusted distance between Rail Supports
+    - Readded Radar
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 05. 12. 2024
+  Balancing:
+    - Reduced the cost for solar panels technology by a lot.
+  Bugfixes:
+    - Fixed not being able to crafting items such as recycler, foundry, cryogenic plant and more.
+  Changes:
+    - Added a recipe to Vulcanus that lets you make carbon
+    - Changed thruster-oxidizer recipe. Now require iron plate instead of iron ore. It is now possible to make fuel on Vulcanus.
+    - Changed how we disable technologies in order to be compatible with more mods.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 04. 12. 2024
+  Bugfixes:
+    - English is no longer Russian in disguise (Fixed a bug that caused the ru translations to apply for everyone)
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 04. 12. 2024
+  Balancing:
+    - Reduced the starting numbers of crusher to 1
+    - Increased the amount of iron you get from crushing metallic chunks. From 1-10 to 5-20
+    - Side effect: you need half the amount of crusher early meaning less power consumption.
+    - Reduced the amount of stone you get from metallic asteroid crushing from 1-5 to 1. 
+    - Added 1 stone to every other asteroid crushing recipe 
+  Bugfixes:
+    - Changed how planets surfaces are disabled to support mods that create custom surfaces. Thanks to @credomane
+  Changes:
+    - Changed Biter spawner recipe to not require biter eggs.
+    - Biter Spawners can now be build on the space platform
+    - Changed research trigger for Recycling Technology
+    - Changed research trigger for Tungsten Technology
+    - Steel chests can now be build on the platform.
+    - Increased the amount of tungsten you get from Vulcanus asteroids.
+    - Added a way to get Uranium ore from sulfur and Metallic chunks.
+    - The hub chest now accepts modules
+    - Added new graphics and icons for asteroids from Aquilo
+    - Updated required factorion version
+    - Enabled landfill again
+  Translation:
+    - Added Russian translations thanks to @LIK (Danil)
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 03. 12. 2024
+  Bugfixes:
+    - Actually removed dependency to Krastorio Assets
+  Changes:
+    - Hidden unnecessary items from crafting menu and Factoriopedia -  some of these might get added back later
+    - Move steam power below ice processing technology
+    - Move pipes to engine technology
+    - Added Oxide crushing to ice processing technology
+    - Reenabled rails for production science
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 01. 12. 2024
+  Changes:
+    - Removed dependency to Krastorio Assets.
+    - Added ice processing as a way to get water.
+    - Prevent Pods from sending alerts when sent down to the planet. To remove existing alerts use the command /clear_pod_alerts
+    - Added copper cost to space foundations.
+    - Added sulfuric acid as a product from processing vulcanus asteroids chunks.
+    - Removed carbonic processing from the crusher.
+    - Removed unused chests.
+    - Prevent planet surfaces from generating.
+    - Changed the cost of the Hub Chest research, and moved it below steel processing.
+    - Space science technology now also unlocks carbon.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 01. 12. 2024
+  Bugfixes:
+    - Added a way to get carbon while orbiting Fulgora.  Changes:
+    - Added thumbnail to the mod portal.
