@@ -103,7 +103,6 @@ itemsToHide = {
     },
     gun = {
         "flamethrower",
-        "rocket-launcher",
         "combat-shotgun",
         "shotgun",
         "teslagun",

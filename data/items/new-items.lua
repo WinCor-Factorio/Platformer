@@ -58,7 +58,7 @@ data:extend(
         {
             type = "item",
             name = "aquilo-asteroid-chunk",
-            icon = "__space-age__/graphics/icons/oxide-asteroid-chunk.png",
+            icon = "__platformer__/graphics/icons/aquilo-asteroid-chunk.png",
             subgroup = "space-material",
             order = "a[aquilo]-e[chunk]",
             inventory_move_sound = space_age_item_sounds.rock_inventory_move,
