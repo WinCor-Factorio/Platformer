@@ -39,6 +39,7 @@ data.raw.recipe["metallic-asteroid-crushing"].results = {
 }
 data.raw.recipe["metallic-asteroid-crushing"].icon = "__platformer__/graphics/icons/metallic-asteroid-crushing.png"
 data.raw.recipe["metallic-asteroid-crushing"].order = "a-a-a"
+data.raw.recipe["metallic-asteroid-crushing"].energy_required = 5
 
 data.raw.recipe["advanced-metallic-asteroid-crushing"].results = {
     { type = "item", name = "iron-ore",   amount_min = 1, amount_max = 5 },
@@ -47,6 +48,7 @@ data.raw.recipe["advanced-metallic-asteroid-crushing"].results = {
 }
 data.raw.recipe["advanced-metallic-asteroid-crushing"].icon = "__platformer__/graphics/icons/advanced-metallic-asteroid-crushing.png"
 data.raw.recipe["advanced-metallic-asteroid-crushing"].order = "a-a-a"
+data.raw.recipe["advanced-metallic-asteroid-crushing"].energy_required = 5
 
 data.raw.recipe["crusher"].ingredients = {
     { type = "item", name = "steel-plate",     amount = 10 },
