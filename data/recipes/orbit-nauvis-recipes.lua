@@ -74,6 +74,7 @@ local refined_metallic_asteroid_crushing = table.deepcopy(data.raw.recipe["metal
 refined_metallic_asteroid_crushing.name = "refined-metallic-asteroid-crushing"
 refined_metallic_asteroid_crushing.localised_name = { "recipe-name.refined-metallic-asteroid-crushing" }
 refined_metallic_asteroid_crushing.icon = "__space-age__/graphics/icons/advanced-metallic-asteroid-crushing.png"
+refined_metallic_asteroid_crushing.energy_required = 5
 refined_metallic_asteroid_crushing.enabled = false
 refined_metallic_asteroid_crushing.order = "a-a-a"
 refined_metallic_asteroid_crushing.ingredients =
