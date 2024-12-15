@@ -248,6 +248,10 @@ data.raw.technology["lithium-processing"].effects = {
     {
         type = "unlock-recipe",
         recipe = "lithium-salt-processing"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "lithium"
     }
 }
 
