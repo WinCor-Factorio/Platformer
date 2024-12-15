@@ -182,6 +182,10 @@ data.raw.technology["planet-discovery-aquilo"].effects = {
     {
         type = "unlock-recipe",
         recipe = "crolitic-ore-processing"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "ammoniacal-solution-separation"
     }
 }
 data.raw.technology["agriculture"].research_trigger = nil
