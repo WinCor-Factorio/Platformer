@@ -17,3 +17,19 @@ gleba_chunk.results =
 
 }
 data.extend({ gleba_chunk })
+
+
+
+-- Gleba Asteroid Chunk Recycle
+local gleba_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metallic-asteroid-chunk-recycling"])
+gleba_asteroid_chunk_recycling.enabled = true
+gleba_asteroid_chunk_recycling.name = "gleba-asteroid-chunk-recycling"
+gleba_asteroid_chunk_recycling.localised_name = { "recipe-name.gleba-asteroid-chunk-recycling" }
+gleba_asteroid_chunk_recycling.ingredients = {
+    {type = "item", name = "gleba-asteroid-chunk", amount = 1}
+}
+gleba_asteroid_chunk_recycling.results = {
+    {type = "item", name = "gleba-asteroid-chunk", amount = 0, extra_count_fraction = 0.25}
+}
+
+data.extend({ gleba_asteroid_chunk_recycling })
