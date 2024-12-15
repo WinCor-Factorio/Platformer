@@ -13,7 +13,7 @@ data.extend({ crudeic_chunk })
 local crudeic_small = table.deepcopy(data.raw["asteroid"]["small-metallic-asteroid"])
 crudeic_small.name = "small-crudeic-asteroid"
 crudeic_small.icon = "__platformer__/graphics/icons/small-crudeic-asteroid.png"
-crudeic_small.dying_trigger_effect[2].entity_name = "crudeic-asteroid-chunk"
+crudeic_small.dying_trigger_effect[2].asteroid_name = "crudeic-asteroid-chunk"
 crudeic_small.order = "a[crudeic]-b[small]"
 
 for i = 1, 8, 1 do

@@ -6,7 +6,7 @@ data.extend({ gleba_chunk })
 
 local gleba_small = table.deepcopy(data.raw["asteroid"]["small-carbonic-asteroid"])
 gleba_small.name = "small-gleba-asteroid"
-gleba_small.dying_trigger_effect[2].entity_name = "gleba-asteroid-chunk"
+gleba_small.dying_trigger_effect[2].asteroid_name = "gleba-asteroid-chunk"
 gleba_small.order = "a[gleba]-b[small]"
 data.extend({ gleba_small })
 

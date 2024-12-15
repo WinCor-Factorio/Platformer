@@ -13,7 +13,7 @@ data.extend({ fulgora_chunk })
 local fulgora_small = table.deepcopy(data.raw["asteroid"]["small-carbonic-asteroid"])
 fulgora_small.name = "small-fulgora-asteroid"
 fulgora_small.icon = "__platformer__/graphics/icons/small-fulgora-asteroid.png"
-fulgora_small.dying_trigger_effect[2].entity_name = "fulgora-asteroid-chunk"
+fulgora_small.dying_trigger_effect[2].asteroid_name = "fulgora-asteroid-chunk"
 fulgora_small.order = "a[fulgora]-b[small]"
 
 for i = 1, 6, 1 do

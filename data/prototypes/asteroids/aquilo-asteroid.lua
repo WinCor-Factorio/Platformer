@@ -13,7 +13,7 @@ data.extend({ aquilo_chunk })
 local aquilo_small = table.deepcopy(data.raw["asteroid"]["small-oxide-asteroid"])
 aquilo_small.name = "small-aquilo-asteroid"
 aquilo_small.icon = "__platformer__/graphics/icons/small-aquilo-asteroid.png"
-aquilo_small.dying_trigger_effect[2].entity_name = "aquilo-asteroid-chunk"
+aquilo_small.dying_trigger_effect[2].asteroid_name = "aquilo-asteroid-chunk"
 aquilo_small.order = "a[aquilo]-b[small]"
 for i = 1, 7, 1 do
     aquilo_small.graphics_set.variations[i].color_texture.filename =

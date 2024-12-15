@@ -74,7 +74,7 @@ data.raw.technology["space-science-pack"].effects = {
 data.raw.technology["space-platform"].effects = {
     {
         type = "unlock-recipe",
-        recipe = "advanced-metallic-asteroid-crushing"
+        recipe = "metallic-asteroid-crushing"
     },
     {
         type = "unlock-recipe",
@@ -121,6 +121,10 @@ data.raw.technology["advanced-asteroid-processing"].effects = {
     {
         type = "unlock-recipe",
         recipe = "advanced-thruster-oxidizer"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "refined-metallic-asteroid-crushing"
     }
 }
 
@@ -178,6 +182,10 @@ data.raw.technology["planet-discovery-aquilo"].effects = {
     {
         type = "unlock-recipe",
         recipe = "crolitic-ore-processing"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "ammoniacal-solution-separation"
     }
 }
 data.raw.technology["agriculture"].research_trigger = nil
@@ -325,7 +333,6 @@ data.raw.technology["uranium-processing"].research_trigger = {
 
 -- asteroid-productivity
 lib.technology.remove_recipe_productivity_effect("asteroid-productivity", "Removecarbonic-asteroid-crushing");
-lib.technology.remove_recipe_productivity_effect("asteroid-productivity", "metallic-asteroid-crushing");
 lib.technology.remove_recipe_productivity_effect("asteroid-productivity", "advanced-carbonic-asteroid-crushing");
 lib.technology.remove_recipe_productivity_effect("asteroid-productivity", "advanced-oxide-asteroid-crushing");
 local asteroid_productivity_tech = data.raw.technology["asteroid-productivity"]

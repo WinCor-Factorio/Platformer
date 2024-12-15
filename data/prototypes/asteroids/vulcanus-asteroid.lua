@@ -13,7 +13,7 @@ data.extend({ vulcanus_chunk })
 local vulcanus_small = table.deepcopy(data.raw["asteroid"]["small-oxide-asteroid"])
 vulcanus_small.name = "small-vulcanus-asteroid"
 vulcanus_small.icon = "__platformer__/graphics/icons/small-vulcanus-asteroid.png"
-vulcanus_small.dying_trigger_effect[2].entity_name = "vulcanus-asteroid-chunk"
+vulcanus_small.dying_trigger_effect[2].asteroid_name = "vulcanus-asteroid-chunk"
 vulcanus_small.order = "a[vulcanus]-b[small]"
 
 for i = 1, 7, 1 do
