@@ -32,11 +32,21 @@ data.raw.recipe["electric-furnace-recycling"].results = {
     }
 }
 
-data.raw.recipe["advanced-metallic-asteroid-crushing"].results = {
+data.raw.recipe["metallic-asteroid-crushing"].results = {
     { type = "item", name = "iron-ore",   amount_min = 5, amount_max = 20 },
     { type = "item", name = "copper-ore", amount_min = 1, amount_max = 5 },
     { type = "item", name = "stone",      amount = 1 }
 }
+data.raw.recipe["metallic-asteroid-crushing"].icon = "__platformer__/graphics/icons/metallic-asteroid-crushing.png"
+data.raw.recipe["metallic-asteroid-crushing"].order = "a-a-a"
+
+data.raw.recipe["advanced-metallic-asteroid-crushing"].results = {
+    { type = "item", name = "iron-ore",   amount_min = 1, amount_max = 5 },
+    { type = "item", name = "copper-ore", amount_min = 5, amount_max = 20 },
+    { type = "item", name = "stone",      amount = 1 }
+}
+data.raw.recipe["advanced-metallic-asteroid-crushing"].icon = "__platformer__/graphics/icons/advanced-metallic-asteroid-crushing.png"
+data.raw.recipe["advanced-metallic-asteroid-crushing"].order = "a-a-a"
 
 data.raw.recipe["crusher"].ingredients = {
     { type = "item", name = "steel-plate",     amount = 10 },
