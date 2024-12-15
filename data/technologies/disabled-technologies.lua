@@ -1,76 +1,81 @@
 -- Disabled technologies
-platformer.technology.remove_research("heavy-armor")
-platformer.technology.remove_research("battery-equipment")
-platformer.technology.remove_research("belt-immunity-equipment")
-platformer.technology.remove_research("night-vision-equipment")
-platformer.technology.remove_research("modular-armor")
-platformer.technology.remove_research("solar-panel-equipment")
-platformer.technology.remove_research("toolbelt")
-platformer.technology.remove_research("electric-energy-distribution-2")
-platformer.technology.remove_research("mining-productivity-1")
-platformer.technology.remove_research("mining-productivity-2")
-platformer.technology.remove_research("mining-productivity-3")
-platformer.technology.remove_research("flamethrower")
-platformer.technology.remove_research("defender")
-platformer.technology.remove_research("follower-robot-count-1")
-platformer.technology.remove_research("follower-robot-count-2")
-platformer.technology.remove_research("follower-robot-count-3")
-platformer.technology.remove_research("follower-robot-count-4")
-platformer.technology.remove_research("follower-robot-count-5")
-platformer.technology.remove_research("refined-flammables-1")
-platformer.technology.remove_research("refined-flammables-2")
-platformer.technology.remove_research("refined-flammables-3")
-platformer.technology.remove_research("refined-flammables-4")
-platformer.technology.remove_research("refined-flammables-5")
-platformer.technology.remove_research("refined-flammables-6")
-platformer.technology.remove_research("refined-flammables-7")
-platformer.technology.remove_research("energy-shield-equipment")
-platformer.technology.remove_research("exoskeleton-equipment")
-platformer.technology.remove_research("personal-roboport-equipment")
-platformer.technology.remove_research("worker-robots-speed-1")
-platformer.technology.remove_research("worker-robots-speed-2")
-platformer.technology.remove_research("worker-robots-speed-3")
-platformer.technology.remove_research("worker-robots-speed-4")
-platformer.technology.remove_research("worker-robots-speed-5")
-platformer.technology.remove_research("worker-robots-speed-6")
-platformer.technology.remove_research("worker-robots-speed-7")
-platformer.technology.remove_research("braking-force-1")
-platformer.technology.remove_research("braking-force-2")
-platformer.technology.remove_research("braking-force-3")
-platformer.technology.remove_research("braking-force-4")
-platformer.technology.remove_research("braking-force-5")
-platformer.technology.remove_research("braking-force-6")
-platformer.technology.remove_research("braking-force-7")
-platformer.technology.remove_research("construction-robotics")
-platformer.technology.remove_research("power-armor")
-platformer.technology.remove_research("worker-robots-storage-1")
-platformer.technology.remove_research("worker-robots-storage-2")
-platformer.technology.remove_research("worker-robots-storage-3")
-platformer.technology.remove_research("discharge-defense-equipment")
-platformer.technology.remove_research("personal-laser-defense-equipment")
-platformer.technology.remove_research("distractor")
-platformer.technology.remove_research("battery-mk2-equipment")
-platformer.technology.remove_research("battery-mk3-equipment")
-platformer.technology.remove_research("fission-reactor-equipment")
-platformer.technology.remove_research("electric-weapons-damage-1")
-platformer.technology.remove_research("electric-weapons-damage-2")
-platformer.technology.remove_research("electric-weapons-damage-3")
-platformer.technology.remove_research("electric-weapons-damage-4")
-platformer.technology.remove_research("destroyer")
-platformer.technology.remove_research("power-armor-mk2")
-platformer.technology.remove_research("logistic-system")
-platformer.technology.remove_research("personal-roboport-mk2-equipment")
-platformer.technology.remove_research("energy-shield-mk2-equipment")
-platformer.technology.remove_research("cliff-explosives")
-platformer.technology.remove_research("mech-armor")
-platformer.technology.remove_research("tree-seeding")
-platformer.technology.remove_research("toolbelt-equipment")
-platformer.technology.remove_research("fish-breeding")
-platformer.technology.remove_research("spidertron")
-platformer.technology.remove_research("fusion-reactor-equipment")
-platformer.technology.remove_research("foundation")
-platformer.technology.remove_research("health")
-platformer.technology.remove_research("artillery-shell-speed-1")
-platformer.technology.remove_research("artillery-shell-damage-1")
-platformer.technology.remove_research("artillery-shell-range-1")
-platformer.technology.remove_research("artillery")
+local remove_technologies = {
+    "heavy-armor",
+    "battery-equipment",
+    "belt-immunity-equipment",
+    "night-vision-equipment",
+    "modular-armor",
+    "solar-panel-equipment",
+    "toolbelt",
+    "electric-energy-distribution-2",
+    "mining-productivity-1",
+    "mining-productivity-2",
+    "mining-productivity-3",
+    "flamethrower",
+    "defender",
+    "follower-robot-count-1",
+    "follower-robot-count-2",
+    "follower-robot-count-3",
+    "follower-robot-count-4",
+    "follower-robot-count-5",
+    "refined-flammables-1",
+    "refined-flammables-2",
+    "refined-flammables-3",
+    "refined-flammables-4",
+    "refined-flammables-5",
+    "refined-flammables-6",
+    "refined-flammables-7",
+    "energy-shield-equipment",
+    "exoskeleton-equipment",
+    "personal-roboport-equipment",
+    "worker-robots-speed-1",
+    "worker-robots-speed-2",
+    "worker-robots-speed-3",
+    "worker-robots-speed-4",
+    "worker-robots-speed-5",
+    "worker-robots-speed-6",
+    "worker-robots-speed-7",
+    "braking-force-1",
+    "braking-force-2",
+    "braking-force-3",
+    "braking-force-4",
+    "braking-force-5",
+    "braking-force-6",
+    "braking-force-7",
+    "construction-robotics",
+    "power-armor",
+    "worker-robots-storage-1",
+    "worker-robots-storage-2",
+    "worker-robots-storage-3",
+    "discharge-defense-equipment",
+    "personal-laser-defense-equipment",
+    "distractor",
+    "battery-mk2-equipment",
+    "battery-mk3-equipment",
+    "fission-reactor-equipment",
+    "electric-weapons-damage-1",
+    "electric-weapons-damage-2",
+    "electric-weapons-damage-3",
+    "electric-weapons-damage-4",
+    "destroyer",
+    "power-armor-mk2",
+    "logistic-system",
+    "personal-roboport-mk2-equipment",
+    "energy-shield-mk2-equipment",
+    "cliff-explosives",
+    "mech-armor",
+    "tree-seeding",
+    "toolbelt-equipment",
+    "fish-breeding",
+    "spidertron",
+    "fusion-reactor-equipment",
+    "foundation",
+    "health",
+    "artillery-shell-speed-1",
+    "artillery-shell-damage-1",
+    "artillery-shell-range-1",
+    "artillery",
+    "electric-energy-distribution-1"
+}
+
+lib.technology.remove_many(remove_technologies)

@@ -1,4 +1,4 @@
-require("__platformer__/lib/platformer.lua")
+require("__platformer__/lib/lib.lua")
 
 require("__platformer__/data/recipes/recipes.lua")
 require("__platformer__/data/technologies/technologies.lua")

@@ -1,29 +1,7 @@
-platformer = {}
-
-platformer.helpers = {}
-platformer.helpers.tablelength = function(T)
-    local count = 0
-    if T ~= nil then
-        for _ in pairs(T) do count = count + 1 end
-    end
-    return count
-end
-
-platformer.recipe = {}
-
---Both disables, hides from factoriopedia and removes it from technology unlocks
-platformer.recipe.hide = function(recipe_name)
-    local recipe = data.raw.recipe[recipe_name]
-    recipe.enabled = false
-    recipe.hidden = true
-    recipe.hidden_in_factoriopedia = true
-    platformer.technology.remove_recipe_everywhere(recipe_name)
-end
-
-platformer.technology = {}
+lib.technology = {}
 
 --Simple function to scan the provided technology and removed the desired effect.
-platformer.technology.remove_effect = function(technology_name, effect_name)
+lib.technology.remove_effect = function(technology_name, effect_name)
     local technology = data.raw.technology[technology_name]
     if technology.effects ~= nil then
         for i, effect in pairs(technology.effects) do
@@ -35,7 +13,7 @@ platformer.technology.remove_effect = function(technology_name, effect_name)
 end
 
 --Simple function to scan the provided technology and removed the desired recipe unlock.
-platformer.technology.remove_recipe = function(technology_name, recipe_name)
+lib.technology.remove_recipe = function(technology_name, recipe_name)
     local technology = data.raw.technology[technology_name]
     if technology.effects ~= nil then
         for i, effect in pairs(technology.effects) do
@@ -47,34 +25,41 @@ platformer.technology.remove_recipe = function(technology_name, recipe_name)
     end
 end
 
--- Not the most performant want to remove recipes
-platformer.technology.remove_recipe_everywhere = function(recipe_name)
-    log("Removing recipe (" .. recipe_name .. ") from all researches.")
+-- Calls remove_recipe for all technologies
+lib.technology.remove_everywhere = function(recipe_name)
+    log("Removing recipe (" .. recipe_name .. ") from all technologies.")
     for technology_name, _ in pairs(data.raw.technology) do
-        platformer.technology.remove_recipe(technology_name, recipe_name)
+        lib.technology.remove_recipe(technology_name, recipe_name)
     end
 end
 
--- Checks if the technology has no effects before calling remove_research.
-platformer.technology.prune_research = function(technology_name)
+-- Checks if the technology has no effects before calling remove.
+lib.technology.prune = function(technology_name)
     local technology = data.raw.technology[technology_name]
-    if platformer.helpers.tablelength(technology.effects) == 0 then
-        platformer.technology.remove_research(technology_name)
+    if lib.helpers.tablelength(technology.effects) == 0 then
+        lib.technology.remove(technology_name)
+    end
+end
+
+-- Calls prune for all technologies
+lib.technology.prune_all = function()
+    for technology_name, _ in pairs(data.raw.technology) do
+        lib.technology.prune(technology_name)
     end
 end
 
 -- Removes a technology by name from the research tree. Will scan all technologies and seamlessly fix chains broken by removal.
-platformer.technology.remove_research = function(technology_name)
+lib.technology.remove = function(technology_name)
     local technology = data.raw.technology[technology_name]
-    local dependents = platformer.technology.find_dependents(technology_name)
+    local dependents = lib.technology.find_dependents(technology_name)
 
-    log("Removing research (" .. technology_name .. ") from the technology tree.")
+    log("Removing technology (" .. technology_name .. ") from the technology tree.")
 
     for _, dependent in pairs(dependents) do
-        platformer.technology.remove_prerequisite(dependent, technology_name)
+        lib.technology.remove_prerequisite(dependent, technology_name)
         if technology.prerequisites ~= nil then
             for _, prerequisite in pairs(technology.prerequisites) do
-                platformer.technology.add_prerequisite(dependent, prerequisite)
+                lib.technology.add_prerequisite(dependent, prerequisite)
             end
         end
     end
@@ -83,8 +68,14 @@ platformer.technology.remove_research = function(technology_name)
     technology.visible_when_disabled = false
 end
 
+lib.technology.remove_many = function (technologies) 
+    for _, technology in ipairs(technologies) do 
+        lib.technology.remove(technology) 
+    end 
+end
+
 -- Returns list of technology names that depend on a technology
-platformer.technology.find_dependents = function(technology_name)
+lib.technology.find_dependents = function(technology_name)
     local prerequisites = {}
     for dep_tech_name, technology in pairs(data.raw.technology) do
         if technology.prerequisites ~= nil then
@@ -99,19 +90,8 @@ platformer.technology.find_dependents = function(technology_name)
     return prerequisites
 end
 
--- Checks if a technologies depends on another technology
-platformer.technology.has_prerequisite = function(technology_name, prerequisite_name)
-    local technology = data.raw.technology[technology_name]
-    for i, prerequisite in pairs(technology.prerequisites) do
-        if prerequisite == prerequisite_name then
-            return true
-        end
-    end
-    return false
-end
-
 -- Removes a prerequisite technology from another technology
-platformer.technology.remove_prerequisite = function(technology_name, prerequisite_name)
+lib.technology.remove_prerequisite = function(technology_name, prerequisite_name)
     local technology = data.raw.technology[technology_name]
     for i, prerequisite in pairs(technology.prerequisites) do
         if prerequisite == prerequisite_name then
@@ -121,9 +101,22 @@ platformer.technology.remove_prerequisite = function(technology_name, prerequisi
 end
 
 -- Adds a prerequisite technology from another technology
-platformer.technology.add_prerequisite = function(technology_name, prerequisite_name)
+lib.technology.add_prerequisite = function(technology_name, prerequisite_name)
     local technology = data.raw.technology[technology_name]
-    if not platformer.technology.has_prerequisite(technology_name, prerequisite_name) then
+    if not lib.technology.has_prerequisite(technology_name, prerequisite_name) then
+        log("Add " .. prerequisite_name .. " To " .. technology_name)
         table.insert(technology.prerequisites, prerequisite_name)
+        log(technology.prerequisites)
     end
+end
+
+-- Checks if a technologies depends on another technology
+lib.technology.has_prerequisite = function(technology_name, prerequisite_name)
+    local technology = data.raw.technology[technology_name]
+    for i, prerequisite in pairs(technology.prerequisites) do
+        if prerequisite == prerequisite_name then
+            return true
+        end
+    end
+    return false
 end
