@@ -65,7 +65,6 @@ data.raw.recipe["defender-capsule"].hidden = true
 data.raw.recipe["distractor-capsule"].hidden = true
 data.raw.recipe["destroyer-capsule"].hidden = true
 data.raw.recipe["flamethrower"].hidden = true
-data.raw.recipe["rocket-launcher"].hidden = true
 data.raw.recipe["combat-shotgun"].hidden = true
 data.raw.recipe["shotgun"].hidden = true
 data.raw.recipe["teslagun"].hidden = true
