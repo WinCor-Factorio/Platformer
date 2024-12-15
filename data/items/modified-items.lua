@@ -16,6 +16,7 @@ data.raw["train-stop"]["train-stop"].surface_conditions = {}
 data.raw["locomotive"]["locomotive"].surface_conditions = {}
 data.raw["cargo-wagon"]["cargo-wagon"].surface_conditions = {}
 data.raw["fluid-wagon"]["fluid-wagon"].surface_conditions = {}
+data.raw["boiler"]["boiler"].surface_conditions = {}
 
 
 
