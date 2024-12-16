@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+Date: 15. 12. 2024
+  Bugfixes:
+    - Added missing lithium-plate recipe unlock to lithium-processing.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.2
 Date: 15. 12. 2024
   Bugfixes:
-    - Added missing lithium recipe
+    - Added missing lithium recipe unlock to lithium-processing.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 15. 12. 2024
