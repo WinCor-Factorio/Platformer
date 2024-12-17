@@ -22,6 +22,7 @@ local fulgora_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metalli
 fulgora_asteroid_chunk_recycling.enabled = true
 fulgora_asteroid_chunk_recycling.name = "fulgora-asteroid-chunk-recycling"
 fulgora_asteroid_chunk_recycling.localised_name = { "recipe-name.fulgora-asteroid-chunk-recycling" }
+fulgora_asteroid_chunk_recycling.icon = "__platformer__/graphics/icons/fulgora-asteroid-chunk.png"
 fulgora_asteroid_chunk_recycling.ingredients = {
     {type = "item", name = "fulgora-asteroid-chunk", amount = 1}
 }

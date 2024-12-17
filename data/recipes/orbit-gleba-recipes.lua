@@ -25,6 +25,7 @@ local gleba_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metallic-
 gleba_asteroid_chunk_recycling.enabled = true
 gleba_asteroid_chunk_recycling.name = "gleba-asteroid-chunk-recycling"
 gleba_asteroid_chunk_recycling.localised_name = { "recipe-name.gleba-asteroid-chunk-recycling" }
+gleba_asteroid_chunk_recycling.icon = "__space-age__/graphics/icons/carbonic-asteroid-chunk.png"
 gleba_asteroid_chunk_recycling.ingredients = {
     {type = "item", name = "gleba-asteroid-chunk", amount = 1}
 }

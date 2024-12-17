@@ -52,18 +52,17 @@ uranium_extraction.results =
 data.extend({ uranium_extraction })
 
 
-
-
 -- Crudeic Asteroid Chunk Recycle
 local crudeic_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metallic-asteroid-chunk-recycling"])
 crudeic_asteroid_chunk_recycling.enabled = true
 crudeic_asteroid_chunk_recycling.name = "crudeic-asteroid-chunk-recycling"
 crudeic_asteroid_chunk_recycling.localised_name = { "recipe-name.crudeic-asteroid-chunk-recycling" }
+
 crudeic_asteroid_chunk_recycling.ingredients = {
-    {type = "item", name = "crudeic-asteroid-chunk", amount = 1}
+    { type = "item", name = "crudeic-asteroid-chunk", amount = 1 }
 }
 crudeic_asteroid_chunk_recycling.results = {
-    {type = "item", name = "crudeic-asteroid-chunk", amount = 0, extra_count_fraction = 0.25}
+    { type = "item", name = "crudeic-asteroid-chunk", amount = 0, extra_count_fraction = 0.25 }
 }
 
 data.extend({ crudeic_asteroid_chunk_recycling })
@@ -88,3 +87,18 @@ refined_metallic_asteroid_crushing.results =
     { type = "item", name = "stone",      amount = 1 },
 }
 data.extend({ refined_metallic_asteroid_crushing })
+
+-- Crude oil sludge Recycle
+local crude_oil_sludge = table.deepcopy(data.raw.recipe["metallic-asteroid-chunk-recycling"])
+crude_oil_sludge.enabled = true
+crude_oil_sludge.name = "crude-oil-sludge-recycling"
+crude_oil_sludge.localised_name = { "recipe-name.crude-oil-sludge-recycling" }
+crude_oil_sludge.icon = "__base__/graphics/icons/crude-oil-resource.png"
+crude_oil_sludge.ingredients = {
+    { type = "item", name = "crude-oil-sludge", amount = 1 }
+}
+crude_oil_sludge.results = {
+    { type = "item", name = "crude-oil-sludge", amount = 0, extra_count_fraction = 0.25 }
+}
+
+data.extend({ crude_oil_sludge })

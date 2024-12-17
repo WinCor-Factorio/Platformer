@@ -54,17 +54,32 @@ lava_stone_to_carbon.results =
 data.extend({ lava_stone_to_carbon })
 
 
-
 -- Vulcanus Asteroid Chunk Recycle
 local vulcanus_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metallic-asteroid-chunk-recycling"])
 vulcanus_asteroid_chunk_recycling.enabled = true
 vulcanus_asteroid_chunk_recycling.name = "vulcanus-asteroid-chunk-recycling"
 vulcanus_asteroid_chunk_recycling.localised_name = { "recipe-name.vulcanus-asteroid-chunk-recycling" }
-vulcanus_asteroid_chunk_recycling.ingredients = {
-    {type = "item", name = "vulcanus-asteroid-chunk", amount = 1}
+vulcanus_asteroid_chunk_recycling.icon = "__platformer__/graphics/icons/lava-stone.png"
+vulcanus_asteroid_chunk_recycling.ingredients    = {
+    { type = "item", name = "vulcanus-asteroid-chunk", amount = 1 }
 }
-vulcanus_asteroid_chunk_recycling.results = {
-    {type = "item", name = "vulcanus-asteroid-chunk", amount = 0, extra_count_fraction = 0.25}
+vulcanus_asteroid_chunk_recycling.results        = {
+    { type = "item", name = "vulcanus-asteroid-chunk", amount = 0, extra_count_fraction = 0.25 }
 }
 
 data.extend({ vulcanus_asteroid_chunk_recycling })
+
+-- lava-stone Recycle
+local lava_stone = table.deepcopy(data.raw.recipe["metallic-asteroid-chunk-recycling"])
+lava_stone.enabled = true
+lava_stone.name = "lava-stone-recycling"
+lava_stone.localised_name = { "recipe-name.lava-stone-recycling" }
+lava_stone.icon = "__platformer__/graphics/icons/lava-stone.png"
+lava_stone.ingredients = {
+    { type = "item", name = "lava-stone", amount = 1 }
+}
+lava_stone.results        = {
+    { type = "item", name = "lava-stone", amount = 0, extra_count_fraction = 0.25 }
+}
+
+data.extend({ lava_stone })
