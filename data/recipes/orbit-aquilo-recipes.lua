@@ -58,7 +58,7 @@ local aquilo_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metallic
 aquilo_asteroid_chunk_recycling.enabled = true
 aquilo_asteroid_chunk_recycling.name = "aquilo-asteroid-chunk-recycling"
 aquilo_asteroid_chunk_recycling.localised_name = { "recipe-name.aquilo-asteroid-chunk-recycling" }
-aquilo_asteroid_chunk_recycling.icon.next = "__platformer__/graphics/icons/aquilo-asteroid-chunk.png"
+aquilo_asteroid_chunk_recycling.icon = "__platformer__/graphics/icons/aquilo-asteroid-chunk.png"
 aquilo_asteroid_chunk_recycling.ingredients = {
     { type = "item", name = "aquilo-asteroid-chunk", amount = 1 }
 }
