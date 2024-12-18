@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+Date: 18. 12. 2024
+  Bugfixes:
+    - Fixed potential desync with Hub chests in multiplayer
+  Changes:
+    - Added changelog (this)
+    - Added recipe for recycling Lava stone
+    - Added recipe for recycling Crude oil sludge
+---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 15. 12. 2024
   Bugfixes:
