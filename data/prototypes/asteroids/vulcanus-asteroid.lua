@@ -52,7 +52,7 @@ vulcanus_huge.icon = "__platformer__/graphics/icons/huge-vulcanus-asteroid.png"
 vulcanus_huge.dying_trigger_effect[2].entity_name = "big-vulcanus-asteroid"
 vulcanus_huge.order = "a[vulcanus]-e[huge]"
 
-for i = 1, 8, 1 do
+for i = 1, 7, 1 do
     vulcanus_huge.graphics_set.variations[i].color_texture.filename =
         "__platformer__/graphics/entity/vulcanus/huge/asteroid-vulcanus-huge-colour-0" .. i .. ".png"
 end

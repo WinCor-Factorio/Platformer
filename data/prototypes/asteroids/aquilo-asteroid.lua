@@ -48,7 +48,8 @@ aquilo_huge.name = "huge-aquilo-asteroid"
 aquilo_huge.icon = "__platformer__/graphics/icons/huge-aquilo-asteroid.png"
 aquilo_huge.dying_trigger_effect[2].entity_name = "big-aquilo-asteroid"
 aquilo_huge.order = "a[aquilo]-e[huge]"
-for i = 1, 8, 1 do
+for i = 1, 7, 1 do
+    log("__platformer__/graphics/entity/aquilo/huge/asteroid-aquilo-huge-colour-0" .. i .. ".png" )
     aquilo_huge.graphics_set.variations[i].color_texture.filename =
         "__platformer__/graphics/entity/aquilo/huge/asteroid-aquilo-huge-colour-0" .. i .. ".png"
 end
