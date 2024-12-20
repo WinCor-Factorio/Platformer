@@ -80,4 +80,4 @@ local hidden_recipes = {
     "cargo-landing-pad"
 }
 
-lib.recipe.hide_many(hidden_recipes)
+platformer.recipe.hide_many(hidden_recipes)

@@ -4,4 +4,4 @@ require("__platformer__/data/technologies/new-technologies.lua")
 
 -- Enable selected technologies
 data.raw.technology["space-platform"].enabled = true;
-lib.technology.prune_all()
+platformer.technology.prune_all()

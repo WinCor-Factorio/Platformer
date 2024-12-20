@@ -78,4 +78,4 @@ local remove_technologies = {
     "electric-energy-distribution-1"
 }
 
-lib.technology.remove_many(remove_technologies)
+platformer.technology.remove_many(remove_technologies)

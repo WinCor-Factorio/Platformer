@@ -1,7 +1,7 @@
-lib = {}
+platformer = {}
 
-lib.helpers = {}
-lib.helpers.tablelength = function(T)
+platformer.helpers = {}
+platformer.helpers.tablelength = function(T)
     local count = 0
     if T ~= nil then
         for _ in pairs(T) do count = count + 1 end
