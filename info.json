@@ -7,7 +7,7 @@
   "dependencies": [
     "base >= 2.0.0",
     "space-age >= 2.0.23",
-    "space-platform-chests >= 1.0.8",
+    "space-platform-chests >= 1.0.9",
     "quality >= 2.0.23",
     "elevated-rails >= 2.0.23"
   ],
