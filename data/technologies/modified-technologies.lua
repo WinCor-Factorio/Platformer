@@ -89,6 +89,14 @@ data.raw.technology["space-platform"].effects = {
         recipe = "cargo-bay"
     },
     {
+        type = "unlock-recipe",
+        recipe = "space-platform-foundation"
+    },
+    {
+        type = "unlock-recipe",
+        recipe = "electric-furnace"
+    },
+    {
         type = "create-ghost-on-entity-death",
         modifier = true
     },

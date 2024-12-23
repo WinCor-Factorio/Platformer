@@ -5,7 +5,3 @@ require("__platformer__/data/recipes/orbit-nauvis-recipes.lua")
 require("__platformer__/data/recipes/oribt-vulcanus-recipes.lua")
 require("__platformer__/data/recipes/modified-recipes.lua")
 require("__platformer__/data/recipes/disabled-recipes.lua")
-
--- Enable starting recipes.
-data.raw.recipe["electric-furnace"].enabled = true
-data.raw.recipe["space-platform-foundation"].enabled = true
