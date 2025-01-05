@@ -9,7 +9,8 @@
     "space-age >= 2.0.23",
     "space-platform-chests >= 1.0.9",
     "quality >= 2.0.23",
-    "elevated-rails >= 2.0.23"
+    "elevated-rails >= 2.0.23",
+    "orbital-transfer >= 0.2.3"
   ],
   "description": "In a remote corner of the universe, you find yourself adrift on a solitary space platform. With only passing asteroids to sustain you, your progression hinges on your ability to gather resources from these wandering celestial bodies."
 }
