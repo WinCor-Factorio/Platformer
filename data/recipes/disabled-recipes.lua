@@ -21,8 +21,6 @@ local hidden_recipes = {
     "refined-hazard-concrete",
     "hazard-concrete",
     "cliff-explosives",
-    "active-provider-chest",
-    "passive-provider-chest",
     "storage-chest",
     "buffer-chest",
     "requester-chest",

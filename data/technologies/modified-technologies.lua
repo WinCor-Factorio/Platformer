@@ -347,6 +347,13 @@ data.raw.technology["uranium-processing"].research_trigger = {
     count = 1
 }
 
+data.raw.technology["logistic-system"].effects = {
+    {
+        type = "unlock-recipe",
+        recipe = "active-provider-chest"
+    }
+}
+
 -- asteroid-productivity
 platformer.technology.remove_recipe_productivity_effect("asteroid-productivity", "Removecarbonic-asteroid-crushing");
 platformer.technology.remove_recipe_productivity_effect("asteroid-productivity", "advanced-carbonic-asteroid-crushing");

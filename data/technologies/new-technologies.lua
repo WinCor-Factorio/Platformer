@@ -54,5 +54,27 @@ data:extend({
             time = 30
         },
         prerequisites = { "space-science-pack" }
+    },
+    {
+        type = "technology",
+        name = "platform-creator",
+        essential = true,
+        icon_size = 64,
+        icon = "__space-age__/graphics/icons/space-platform-hub.png",
+        max_level = "infinite",
+        unit =
+        {
+            count_formula="2^L*25",
+            ingredients =
+            {
+                { "automation-science-pack", 1 },
+                { "logistic-science-pack",   1 },
+                { "chemical-science-pack",   1 },
+                { "space-science-pack",      1 }
+            },
+            time = 60
+        },
+        order = "c-a",
+        prerequisites = { "orbital-transfer" }
     }
 })

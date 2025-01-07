@@ -18,8 +18,6 @@ itemsToHide = {
         "artificial-yumako-soil",
         "refined-hazard-concrete",
         "hazard-concrete",
-        "active-provider-chest",
-        "passive-provider-chest",
         "storage-chest",
         "buffer-chest",
         "requester-chest",
@@ -67,8 +65,6 @@ itemsToHide = {
         "tank"
     },
     logistic_container = {
-        "active-provider-chest",
-        "passive-provider-chest",
         "storage-chest",
         "buffer-chest",
         "requester-chest"
