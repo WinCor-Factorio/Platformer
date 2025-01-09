@@ -1,5 +1,4 @@
 local hidden_recipes = {
-    "iron-chest",
     "wooden-chest",
     "small-electric-pole",
     "medium-electric-pole",

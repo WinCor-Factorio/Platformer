@@ -2,7 +2,6 @@ itemsToHide = {
     item = {
         "carbonic-asteroid-chunk",
         "wooden-chest",
-        "iron-chest",
         "small-electric-pole",
         "medium-electric-pole",
         "big-electric-pole",
@@ -47,8 +46,7 @@ itemsToHide = {
         "artillery-turret"
     },
     container = {
-        "wooden-chest",
-        "iron-chest"
+        "wooden-chest"
     },
     item_with_entity_data = {
         "artillery-wagon",
