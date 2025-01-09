@@ -3,9 +3,6 @@ itemsToHide = {
         "carbonic-asteroid-chunk",
         "wooden-chest",
         "small-electric-pole",
-        "medium-electric-pole",
-        "big-electric-pole",
-        "substation",
         "construction-robot",
         "logistic-robot",
         "roboport",
@@ -55,10 +52,7 @@ itemsToHide = {
         "spidertron"
     },
     electric_pole = {
-        "small-electric-pole",
-        "medium-electric-pole",
-        "big-electric-pole",
-        "substation",
+        "small-electric-pole"
     },
     car = {
         "car",

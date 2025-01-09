@@ -1,9 +1,6 @@
 local hidden_recipes = {
     "wooden-chest",
     "small-electric-pole",
-    "medium-electric-pole",
-    "big-electric-pole",
-    "substation",
     "artillery-wagon",
     "car",
     "tank",
