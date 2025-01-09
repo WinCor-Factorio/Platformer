@@ -348,7 +348,7 @@ data.raw.technology["uranium-processing"].research_trigger = {
 }
 
 -- asteroid-productivity
-platformer.technology.remove_recipe_productivity_effect("asteroid-productivity", "Removecarbonic-asteroid-crushing");
+platformer.technology.remove_recipe_productivity_effect("asteroid-productivity", "carbonic-asteroid-crushing");
 platformer.technology.remove_recipe_productivity_effect("asteroid-productivity", "advanced-carbonic-asteroid-crushing");
 platformer.technology.remove_recipe_productivity_effect("asteroid-productivity", "advanced-oxide-asteroid-crushing");
 local asteroid_productivity_tech = data.raw.technology["asteroid-productivity"]
@@ -362,3 +362,5 @@ table.insert(asteroid_productivity_tech.effects,
     { type = "change-recipe-productivity", recipe = "gleba-asteroid-crushing", change = 0.1 })
 table.insert(asteroid_productivity_tech.effects,
     { type = "change-recipe-productivity", recipe = "vulcanus-asteroid-crushing", change = 0.1 })
+table.insert(asteroid_productivity_tech.effects,
+    { type = "change-recipe-productivity", recipe = "refined-metallic-asteroid-crushing", change = 0.1 })
