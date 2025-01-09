@@ -1,28 +1,9 @@
 --Remove Technology Effects
 platformer.technology.remove_recipe("advanced-material-processing", "steel-furnace");
 
-platformer.technology.remove_effects_by_type("logistic-robotics", "character-logistic-requests");
-platformer.technology.remove_effects_by_type("logistic-robotics", "character-logistic-trash-slots");
-platformer.technology.remove_recipe("logistic-robotics", "roboport");
-platformer.technology.remove_recipe("logistic-robotics", "passive-provider-chest");
-platformer.technology.remove_recipe("logistic-robotics", "storage-chest");
-platformer.technology.remove_recipe("logistic-robotics", "logistic-robot");
-
 platformer.technology.remove_effects_by_type("uranium-mining", "mining-with-fluid");
 
-platformer.technology.remove_effects_by_type("rocket-silo", "unlock-space-platforms");
-platformer.technology.remove_recipe("rocket-silo", "rocket-silo");
-platformer.technology.remove_recipe("rocket-silo", "rocket-part");
-platformer.technology.remove_recipe("rocket-silo", "cargo-landing-pad");
-platformer.technology.remove_recipe("rocket-silo", "space-platform-starter-pack");
-platformer.technology.remove_recipe("rocket-silo", "space-platform-foundation");
-
-platformer.technology.remove_recipe("asteroid-reprocessing", "metallic-asteroid-reprocessing");
-platformer.technology.remove_recipe("asteroid-reprocessing", "oxide-asteroid-reprocessing");
-platformer.technology.remove_recipe("asteroid-reprocessing", "carbonic-asteroid-reprocessing");
-
 --Remove some of these things that are unlocked elsewhere so we can possibly prune these technologies later.
-platformer.technology.remove_recipe("asteroid-reprocessing", "iron-stick");                --Unlocked with concrete research
 platformer.technology.remove_recipe("advanced-material-processing-2", "electric-furnace"); --Unlocked at game start.
 
 --automation-science-pack
@@ -53,12 +34,8 @@ data.raw.technology["space-science-pack"].unit =
     time = 30,
     count = 1500
 }
-data.raw.technology["space-science-pack"].prerequisites =
-{ "automation-science-pack",
-    "logistic-science-pack",
-    "chemical-science-pack",
-    "production-science-pack"
-}
+data.raw.technology["space-science-pack"].prerequisites = data.raw.technology["space-platform"].prerequisites
+
 data.raw.technology["space-science-pack"].effects = {
     {
         type = "unlock-recipe",
