@@ -10,7 +10,7 @@ fulgora_chunk.ingredients =
 }
 fulgora_chunk.results =
 {
-    { type = "item", name = "scrap", amount_min = 1, amount_max = 10 },
+    { type = "item", name = "scrap", amount_min = 10, amount_max = 30 },
     { type = "item", name = "stone", amount = 1 },
 }
 data.extend({ fulgora_chunk })
