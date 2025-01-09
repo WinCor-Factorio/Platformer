@@ -73,7 +73,8 @@ local hidden_recipes = {
     "flamethrower-turret",
     "artillery-turret",
     "flamethrower-ammo",
-    "cargo-landing-pad"
+    "cargo-landing-pad",
+    "carbonic-asteroid-crushing"
 }
 
 platformer.recipe.hide_many(hidden_recipes)
