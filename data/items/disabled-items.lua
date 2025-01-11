@@ -14,9 +14,6 @@ itemsToHide = {
         "artificial-yumako-soil",
         "refined-hazard-concrete",
         "hazard-concrete",
-        "storage-chest",
-        "buffer-chest",
-        "requester-chest",
         "burner-mining-drill",
         "electric-mining-drill",
         "big-mining-drill",
@@ -55,11 +52,6 @@ itemsToHide = {
     car = {
         "car",
         "tank"
-    },
-    logistic_container = {
-        "storage-chest",
-        "buffer-chest",
-        "requester-chest"
     },
     mining_drill = {
         "burner-mining-drill",
