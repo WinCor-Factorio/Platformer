@@ -116,3 +116,10 @@ data.raw.recipe["advanced-thruster-oxidizer"].ingredients = {
     { type = "fluid", name = "water",      amount = 100 },
     { type = "item",  name = "calcite",    amount = 1 },
 }
+
+data.raw.recipe["productivity-module-3"].ingredients = {
+    {type = "item", name = "advanced-circuit", amount = 5},
+    {type = "item", name = "processing-unit", amount = 5},
+    {type = "item", name = "uranium-235", amount = 2},
+    {type = "item", name = "productivity-module-2", amount = 4}
+}
