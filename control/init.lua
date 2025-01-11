@@ -1,8 +1,6 @@
 script.on_init(function(e)
     setupStorageVariables()
     disable_cutsceene()
-    create_space_platform()
-    set_starting_items()
     create_permission_group()
     shrink_the_world(game.surfaces[1])
     delete_all_chunks(game.surfaces[1])
@@ -20,7 +18,7 @@ script.on_event(defines.events.on_player_created, function(e)
         player.character.destroy()
     end
 
-    player.teleport({ x = 0, y = 0 }, storage.platform.surface.name)
+    platformer.helpers.setupNewPlayerPlatform(player)
 
     storage.platformPrevIndex[e.player_index] = -1
 end)
@@ -84,37 +82,6 @@ function create_permission_group()
     local group = game.permissions.create_group("players")
     if group then
         group.set_allows_action(defines.input_action.land_at_planet, false)
-    end
-end
-
-function create_space_platform()
-    local force = game.forces["player"]
-    platform = force.create_space_platform({
-        name = "Base One",
-        planet = "nauvis",
-        starter_pack = "space-platform-starter-pack"
-    })
-
-    if not platform then
-        error("The platform was not initiated properly")
-    end
-
-    platform.apply_starter_pack()
-    storage.platform = platform
-end
-
-function set_starting_items()
-    local hub = storage.platform.hub
-    if hub then
-        hub.insert({ name = "crusher", count = 1 })
-        hub.insert({ name = "asteroid-collector", count = 1 })
-        hub.insert({ name = "assembling-machine-1", count = 2 })
-        hub.insert({ name = "inserter", count = 10 })
-        hub.insert({ name = "solar-panel", count = 10 })
-        hub.insert({ name = "space-platform-foundation", count = 100 })
-        hub.insert({ name = "electric-furnace", count = 4 })
-        --hub.insert({ name = "transport-belt", count = 100 })
-        hub.remove_item("orbital-transfer-requester")
     end
 end
 
