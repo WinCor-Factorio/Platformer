@@ -7,20 +7,20 @@ script.on_init(function(e)
     delete_all_chunks(game.surfaces[1])
 end)
 
---script.on_event(defines.events.on_player_created, function(e)
---    local player = game.players[e.player_index]
---
---    local group = game.permissions.get_group("players")
---    if group then
---        group.add_player(player)
---    end
---
---    if player.character ~= nil then
---        --player.character.destroy()
---    end
---
---    --player.teleport({ x = 0, y = 0 }, storage.platform.surface.name)
---end)
+script.on_event(defines.events.on_player_created, function(e)
+    local player = game.players[e.player_index]
+
+    local group = game.permissions.get_group("players")
+    if group then
+        group.add_player(player)
+    end
+
+    if player.character ~= nil then
+        player.character.destroy()
+    end
+
+    player.teleport({ x = 0, y = 0 }, storage.platform.surface.name)
+end)
 
 script.on_event(defines.events.on_surface_created, function(event)
     for _, planet in pairs(game.planets) do
