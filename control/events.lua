@@ -20,27 +20,27 @@ script.on_event(defines.events.on_research_finished, function(e)
     end
 end)
 
-script.on_event(defines.events.on_player_changed_surface, function(e)
-    player = game.players[e.player_index]
-    oldSurfaceIndex = e.surface_index
-    newSurfaceIndex = player.surface.index
+script.on_nth_tick(20, function(e)
+    for _, player in pairs(game.players) do
+        if(player.get_main_inventory()) then
+            if(not storage.platformPlayerInventory[player.surface.index]) then
+                storage.platformPlayerInventory[player.surface.index] = {}
+            end
 
-    if(not storage.platformPlayerInventory) then
-        storage.platformPlayerInventory = {}
-    end
-    if(not storage.platformPlayerInventory[oldSurfaceIndex]) then
-        storage.platformPlayerInventory[oldSurfaceIndex] = {}
-    end
-    
-    
-    storage.platformPlayerInventory[oldSurfaceIndex][e.player_index] = player.character.get_main_inventory().get_contents()
-    player.character.get_main_inventory().clear()
+            if(player.surface.index == storage.platformPrevIndex[player.index]) then
+                if(storage.platformPlayerInventory[player.surface.index][player.index] ~= player.get_main_inventory().get_contents()) then
+                    storage.platformPlayerInventory[player.surface.index][player.index] = player.get_main_inventory().get_contents()
+                end
+            else
+                storage.platformPrevIndex[player.index] = player.surface.index
+                player.get_main_inventory().clear()
 
-    if(storage.platformPlayerInventory ~= nil and storage.platformPlayerInventory[newSurfaceIndex] ~= nil and storage.platformPlayerInventory[newSurfaceIndex][e.player_index]  ~= nil) then
-        for _, item in pairs(storage.platformPlayerInventory[newSurfaceIndex][e.player_index]) do 
-            player.character.insert({name = item.name, count = item.count}) 
+                if(storage.platformPlayerInventory and storage.platformPlayerInventory[player.surface.index] and storage.platformPlayerInventory[player.surface.index][player.index]) then
+                    for _, item in pairs(storage.platformPlayerInventory[player.surface.index][player.index]) do 
+                        player.insert({name = item.name, count = item.count}) 
+                    end
+                end
+            end
         end
     end
-
-    player.teleport({ x = 0, y = 0 }, game.surfaces[newSurfaceIndex])
 end)

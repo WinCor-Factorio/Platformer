@@ -1,4 +1,5 @@
 script.on_init(function(e)
+    setupStorageVariables()
     disable_cutsceene()
     create_space_platform()
     set_starting_items()
@@ -15,7 +16,13 @@ script.on_event(defines.events.on_player_created, function(e)
         group.add_player(player)
     end
 
+    if player.character ~= nil then
+        player.character.destroy()
+    end
+
     player.teleport({ x = 0, y = 0 }, storage.platform.surface.name)
+
+    storage.platformPrevIndex[e.player_index] = -1
 end)
 
 script.on_event(defines.events.on_surface_created, function(event)
@@ -44,7 +51,23 @@ script.on_configuration_changed(function()
         force.reset_technologies()
         force.reset_technology_effects()
     end
+
+    setupStorageVariables()
 end)
+
+function setupStorageVariables()
+    if(not storage.platformPrevIndex) then
+        storage.platformPrevIndex = {}
+    end
+
+    for playerIndex, player in pairs(game.players) do
+        storage.platformPrevIndex[playerIndex] = player.surface.index
+    end
+
+    if( not storage.platformPlayerInventory) then
+        storage.platformPlayerInventory = {}
+    end
+end
 
 function delete_all_chunks(surface)
     for chunk in surface.get_chunks() do
