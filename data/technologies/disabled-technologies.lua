@@ -7,7 +7,6 @@ local remove_technologies = {
     "modular-armor",
     "solar-panel-equipment",
     "toolbelt",
-    "electric-energy-distribution-2",
     "mining-productivity-1",
     "mining-productivity-2",
     "mining-productivity-3",
@@ -73,7 +72,8 @@ local remove_technologies = {
     "artillery-shell-damage-1",
     "artillery-shell-range-1",
     "artillery",
-    "electric-energy-distribution-1"
+    "logistic-robotics",
+    "rocket-silo"
 }
 
 platformer.technology.remove_many(remove_technologies)

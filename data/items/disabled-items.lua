@@ -2,11 +2,7 @@ itemsToHide = {
     item = {
         "carbonic-asteroid-chunk",
         "wooden-chest",
-        "iron-chest",
         "small-electric-pole",
-        "medium-electric-pole",
-        "big-electric-pole",
-        "substation",
         "construction-robot",
         "logistic-robot",
         "roboport",
@@ -45,8 +41,7 @@ itemsToHide = {
         "artillery-turret"
     },
     container = {
-        "wooden-chest",
-        "iron-chest"
+        "wooden-chest"
     },
     item_with_entity_data = {
         "artillery-wagon",
@@ -55,10 +50,7 @@ itemsToHide = {
         "spidertron"
     },
     electric_pole = {
-        "small-electric-pole",
-        "medium-electric-pole",
-        "big-electric-pole",
-        "substation",
+        "small-electric-pole"
     },
     car = {
         "car",
@@ -121,7 +113,9 @@ itemsToHide = {
     lightning_attractor = { "lightning-collector", "lightning-rod" },
     rocket_silo = { "rocket-silo" },
     artillery_turret = { "artillery-turret" },
-    fluid_turret = { "flamethrower-turret" }
+    fluid_turret = { "flamethrower-turret" },
+    asteroid_chunk = { "carbonic-asteroid-chunk" },
+    asteroid =  {"small-carbonic-asteroid", "medium-carbonic-asteroid", "big-carbonic-asteroid", "huge-carbonic-asteroid"}
 }
 
 for key, itemArray in pairs(itemsToHide) do
