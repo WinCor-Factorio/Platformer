@@ -15,10 +15,6 @@ script.on_event(defines.events.on_player_created, function(e)
         group.add_player(player)
     end
 
-    if player.character ~= nil then
-        player.character.destroy()
-    end
-
     player.teleport({ x = 0, y = 0 }, storage.platform.surface.name)
 end)
 
