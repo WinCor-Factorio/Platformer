@@ -6,7 +6,15 @@ planet.asteroid_spawn_definitions = {
         speed = 0.1,
         angle_when_stopped = 0.25,
         type = "asteroid-chunk"
-    },{
+    },
+    {
+        asteroid = "crudeic-asteroid-chunk",
+        probability = 0.05,
+        speed = 0.05,
+        angle_when_stopped = 0.25,
+        type = "asteroid-chunk"
+    },
+    {
         asteroid = "medium-aquilo-asteroid",
         probability = 0.033,
         speed = 0.075,
