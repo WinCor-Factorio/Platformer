@@ -1,13 +1,13 @@
 {
   "name": "platformer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "title": "Platformer",
   "author": "Corlin & Xiroc",
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0.0",
     "space-age >= 2.0.23",
-    "space-platform-chests >= 1.0.9",
+    "space-platform-chests >= 1.0.10",
     "quality >= 2.0.23",
     "elevated-rails >= 2.0.23"
   ],
