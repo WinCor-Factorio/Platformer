@@ -1,3 +1,9 @@
+require("__platformer__/data/prototypes/asteroids/aquilo-asteroid.lua")
+require("__platformer__/data/prototypes/asteroids/crudeic-asteroid.lua")
+require("__platformer__/data/prototypes/asteroids/fulgora-asteroid.lua")
+require("__platformer__/data/prototypes/asteroids/gleba-asteroid.lua")
+require("__platformer__/data/prototypes/asteroids/vulcanus-asteroid.lua")
+
 require("__platformer__/data/prototypes/planets/nauvis.lua")
 require("__platformer__/data/prototypes/planets/vulcanus.lua")
 require("__platformer__/data/prototypes/planets/fulgora.lua")
@@ -23,3 +29,5 @@ table.insert(start_pack.initial_items, {
     name="orbital-transfer-requester",
     amount=1
 })
+
+require("__platformer__/data/prototypes/tips-and-tricks.lua")
