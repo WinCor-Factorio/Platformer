@@ -16,6 +16,7 @@ data:extend({
         order = order .. "b",
         starting_status = "unlocked",
         tag = "[entity=space-platform-hub]",
+        is_title = true,
         trigger = {
             type = "time-elapsed",
             ticks = 60 * 5
