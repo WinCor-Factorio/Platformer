@@ -10,12 +10,10 @@ fulgora_chunk.ingredients =
 }
 fulgora_chunk.results =
 {
-    { type = "item", name = "scrap", amount_min = 10, amount_max = 30 },
+    { type = "item", name = "scrap", amount_min = 5, amount_max = 15 },
     { type = "item", name = "stone", amount = 1 },
 }
 data.extend({ fulgora_chunk })
-
-
 
 -- Fulgora Asteroid Chunk Recycle
 local fulgora_asteroid_chunk_recycling = table.deepcopy(data.raw.recipe["metallic-asteroid-chunk-recycling"])
