@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 13. 01. 2025
+  Balancing:
+    - Buffed the amount of scraps from fulgora chunks.
+    - Replaced biter eggs with uranium-235 for productivity module 3 recipe.
+  Bugfixes:
+    - Renamed lib to platformer as it could become a problem with other mods.
+    - Removed lose condition.
+    - Removed the carbonic asteroids from the game.
+    - Added refined metallic asteroid crushing to asteroid productivity.
+    - Added processing unit and electric engine as a prerequisite to platform thrusters.
+    - Corrected descriptions where surface conditions were mentioed.
+  Changes:
+    - Created tips and tricks, which shows first time you join a game.
+    - Updated version of hub-chest.
+    - Added electric furnace and spaceplatform to start technology.
+    - Readded iron chests and electric poles back to the game as it is needed for other mods.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 18. 12. 2024
   Bugfixes:

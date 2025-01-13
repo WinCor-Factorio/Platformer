@@ -38,7 +38,6 @@ end)
 
 --Regenerate the tech tree any time anything could have changed the tech tree.
 script.on_configuration_changed(function()
-    game.print("Platformer checking technology tree for Correctness...")
     for _, force in pairs(game.forces) do
         for _, technology in pairs(force.technologies) do
             technology.reload()
