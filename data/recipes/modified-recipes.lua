@@ -74,15 +74,9 @@ data.raw.recipe["asteroid-collector"].ingredients = {
 }
 data.raw.recipe["asteroid-collector-recycling"].results = {
 
-    {
-        type = "item", name = "electronic-circuit", amount = 5
-    },
-    {
-        type = "item", name = "engine-unit", amount = 2
-    },
-    {
-        type = "item", name = "long-handed-inserter", amount = 0, extra_count_fraction = 0.5
-    }
+    {type = "item", name = "electronic-circuit", amount = 5},
+    { type = "item", name = "engine-unit", amount = 2},
+    {type = "item", name = "long-handed-inserter", amount = 0, extra_count_fraction = 0.5}
 }
 
 data.raw.recipe["scrap-recycling"].results = {
@@ -100,11 +94,17 @@ data.raw.recipe["scrap-recycling"].results = {
     { type = "item", name = "copper-cable",          amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false },
     { type = "item", name = "carbon",                amount = 1, probability = 0.03, show_details_in_recipe_tooltip = false }
 }
+
 data.raw.recipe["captive-biter-spawner"].ingredients = {
     { type = "item",  name = "uranium-235",          amount = 15 },
     { type = "item",  name = "capture-robot-rocket", amount = 1 },
     { type = "fluid", name = "fluoroketone-cold",    amount = 100 }
 }
+data.raw.recipe["captive-biter-spawner-recycling"].results = {
+    { type = "item",  name = "uranium-235",          amount = 3, extra_count_fraction = 0.75 },
+    { type = "item",  name = "capture-robot-rocket", amount = 0, extra_count_fraction = 0.25 }
+}
+
 
 data.raw.recipe["thruster-oxidizer"].ingredients = {
     { type = "item",  name = "iron-plate", amount = 2 },
@@ -122,4 +122,10 @@ data.raw.recipe["productivity-module-3"].ingredients = {
     {type = "item", name = "processing-unit", amount = 5},
     {type = "item", name = "uranium-235", amount = 2},
     {type = "item", name = "productivity-module-2", amount = 4}
+}
+data.raw.recipe["productivity-module-3-recycling"].results = {
+    {type = "item", name = "advanced-circuit", amount = 1, extra_count_fraction = 0.25},
+    {type = "item", name = "processing-unit", amount = 1, extra_count_fraction = 0.25},
+    {type = "item", name = "uranium-235", amount = 0, extra_count_fraction = 0.5},
+    {type = "item", name = "productivity-module-2", amount = 1}
 }

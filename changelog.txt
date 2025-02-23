@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+Date: 23. 02. 2025
+  Balancing:
+  Bugfixes:
+    - Corrected recycle recipe for productivity module 3
+    - Corrected recycle recipe for captive biter spawner
+    - Added Crudeic asteroid to Aquilo
+  Changes:
+---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 13. 01. 2025
   Balancing:
