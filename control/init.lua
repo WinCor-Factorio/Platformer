@@ -64,6 +64,14 @@ function setupStorageVariables()
     if( not storage.platformPlayerInventory) then
         storage.platformPlayerInventory = {}
     end
+
+    if(not storage.platformResearch) then
+        storage.platformResearch = {}
+    end
+
+    if(not storage.platformResearch["platform-creator"]) then
+        storage.platformResearch["platform-creator"] = {}
+    end
 end
 
 function delete_all_chunks(surface)

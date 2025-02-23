@@ -4,8 +4,9 @@ end
 )
 
 script.on_event(defines.events.on_research_finished, function(e)
-    if e.research.name == "platform-creator" then
+    if e.research.name == "platform-creator" and not storage.platformResearch[e.research.name][e.research.level] then
         platform = platformer.helpers.create_space_platform()
+        storage.platformResearch[e.research.name][e.research.level] = true
     end
 end)
 
