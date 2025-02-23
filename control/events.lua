@@ -3,6 +3,12 @@ script.on_event(defines.events.on_cargo_pod_finished_ascending, function(e)
 end
 )
 
+script.on_event(defines.events.on_surface_deleted, function(e)
+    platform = platformer.helpers.create_space_platform()
+    storage.platformPlayerInventory[e.surface_index] = {}
+end
+)
+
 script.on_event(defines.events.on_research_finished, function(e)
     if e.research.name == "platform-creator" and not storage.platformResearch[e.research.name][e.research.level] then
         platform = platformer.helpers.create_space_platform()
